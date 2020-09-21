@@ -1,6 +1,12 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+
+  resources :teams, only: [:new, :create, :edit, :update]
+  resources :team_documents, only: [:index, :show, :new, :create, :edit, :update]
+  resources :documents, only: [:new, :create, :edit, :update]
+  resources :pages
+
   namespace :admin do
     resources :users
     resources :services
@@ -14,7 +20,6 @@ Rails.application.routes.draw do
     authenticate :user, lambda { |u| u.admin? } do
       mount Sidekiq::Web => '/sidekiq'
     end
-
 
   resources :notifications, only: [:index]
   resources :announcements, only: [:index]
