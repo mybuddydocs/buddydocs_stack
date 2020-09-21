@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_09_21_124422) do
+=======
+ActiveRecord::Schema.define(version: 2020_09_21_132316) do
+>>>>>>> e811fe1a66d062cd37c1e67224e760e71d6c68dc
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +49,41 @@ ActiveRecord::Schema.define(version: 2020_09_21_124422) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+<<<<<<< HEAD
+=======
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "credentials", force: :cascade do |t|
+    t.string "url"
+    t.string "password"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_credentials_on_user_id"
+  end
+
+  create_table "document_tags", force: :cascade do |t|
+    t.bigint "tag_id", null: false
+    t.bigint "document_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["document_id"], name: "index_document_tags_on_document_id"
+    t.index ["tag_id"], name: "index_document_tags_on_tag_id"
+  end
+
+  create_table "documents", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_documents_on_user_id"
+  end
+
+>>>>>>> e811fe1a66d062cd37c1e67224e760e71d6c68dc
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -67,6 +106,17 @@ ActiveRecord::Schema.define(version: 2020_09_21_124422) do
     t.index ["recipient_type", "recipient_id"], name: "index_notifications_on_recipient_type_and_recipient_id"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "pages", force: :cascade do |t|
+    t.integer "page_number"
+    t.bigint "document_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["document_id"], name: "index_pages_on_document_id"
+  end
+
+>>>>>>> e811fe1a66d062cd37c1e67224e760e71d6c68dc
   create_table "services", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "provider"
@@ -81,6 +131,41 @@ ActiveRecord::Schema.define(version: 2020_09_21_124422) do
     t.index ["user_id"], name: "index_services_on_user_id"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_tags_on_category_id"
+  end
+
+  create_table "team_documents", force: :cascade do |t|
+    t.bigint "team_id", null: false
+    t.bigint "document_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["document_id"], name: "index_team_documents_on_document_id"
+    t.index ["team_id"], name: "index_team_documents_on_team_id"
+  end
+
+  create_table "team_users", force: :cascade do |t|
+    t.bigint "team_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["team_id"], name: "index_team_users_on_team_id"
+    t.index ["user_id"], name: "index_team_users_on_user_id"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+>>>>>>> e811fe1a66d062cd37c1e67224e760e71d6c68dc
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -98,5 +183,19 @@ ActiveRecord::Schema.define(version: 2020_09_21_124422) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+<<<<<<< HEAD
   add_foreign_key "services", "users"
+=======
+  add_foreign_key "credentials", "users"
+  add_foreign_key "document_tags", "documents"
+  add_foreign_key "document_tags", "tags"
+  add_foreign_key "documents", "users"
+  add_foreign_key "pages", "documents"
+  add_foreign_key "services", "users"
+  add_foreign_key "tags", "categories"
+  add_foreign_key "team_documents", "documents"
+  add_foreign_key "team_documents", "teams"
+  add_foreign_key "team_users", "teams"
+  add_foreign_key "team_users", "users"
+>>>>>>> e811fe1a66d062cd37c1e67224e760e71d6c68dc
 end
