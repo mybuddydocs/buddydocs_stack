@@ -8,4 +8,7 @@ class User < ApplicationRecord
 
   has_many :notifications, as: :recipient
   has_many :services
+  has_many :team_users
+  has_many :credentials
+  has_many :documents
 end
