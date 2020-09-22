@@ -1,2 +1,7 @@
-<h1>Categories#index</h1>
+<h1>Mes documents</h1>
 <p>Find me in app/views/categories/index.html.erb</p>
+<% @categories.each do |category| %>
+    <div>
+        <%= link_to category.name, documents_path(category: category.name) %>
+    </div>
+<% end %>
