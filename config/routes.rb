@@ -2,6 +2,7 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
 
+  get 'categories/index'
   resources :teams, only: [:new, :create, :edit, :update]
   resources :team_documents, only: [:index, :show, :new, :create, :edit, :update]
   resources :documents, only: [:new, :create, :edit, :update]
