@@ -8,12 +8,12 @@ require("turbolinks").start();
 require("@rails/activestorage").start();
 require("channels");
 require("local-time").start();
+require("stylesheets/application.scss")
 
 window.Rails = Rails;
 
 import "bootstrap";
 import "data-confirm-modal";
-import "../stylesheets/application.scss";
 
 $(document).on("turbolinks:load", () => {
   $('[data-toggle="tooltip"]').tooltip();
