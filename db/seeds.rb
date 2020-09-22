@@ -16,4 +16,3 @@ Category.create!(name: "Mes documents")
 Category.create!(name: "L'administration & moi")
 Category.create!(name: "Les dépenses & moi")
 puts "Some categories have been created"
-
