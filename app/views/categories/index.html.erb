@@ -1,7 +1,19 @@
-<h1>Mes documents</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
-<% @categories.each do |category| %>
-    <div>
-        <%= link_to category.name, documents_path(category: category.name) %>
+<div class="container">
+    <div class="flex bg-gray-200">
+        <h1>Mes documents</h1>
+        <% @categories.each do |category| %>
+            <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+                <%= render 'shared/file_card', category: category.name %>
+            </div>
+        <% end %>
     </div>
-<% end %>
+    <div class="flex bg-gray-200">
+        <h2>Stockage</h2>
+
+    </div>
+</div>
+<div class="flex bg-gray-200">
+  <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+  <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+  <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+</div>
