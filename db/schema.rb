@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 2020_09_22_091430) do
     t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.boolean "available", default: true
   end
 
   create_table "credentials", force: :cascade do |t|

@@ -13,6 +13,7 @@ window.Rails = Rails;
 
 import "bootstrap";
 import "data-confirm-modal";
+
 import "../stylesheets/application.scss";
 
 $(document).on("turbolinks:load", () => {
