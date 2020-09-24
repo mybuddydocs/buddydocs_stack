@@ -10,5 +10,6 @@ RSpec.describe Connector, type: :model do
       connector = Connector.new( name: "Udemy_connector")
       expect(connector).to be_valid
     end
+    it 'has many credentials'
   end
 end
