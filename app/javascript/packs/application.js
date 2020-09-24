@@ -11,9 +11,8 @@ require("local-time").start();
 
 window.Rails = Rails;
 
-import "bootstrap";
+import '../stylesheets/application.scss'
 import "data-confirm-modal";
-
 import "../stylesheets/application.scss";
 
 $(document).on("turbolinks:load", () => {
