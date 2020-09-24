@@ -31,14 +31,19 @@ module Spiders
             linked_url = absolute_url(receipt[:href], base:url)
             request_to :parse_receipt_page, url: linked_url
           end
-
+          # Click on button next until it desappear
           if response.xpath("//a[@class='endless_page_link']").last.inner_text == "Next"
             browser.visit(absolute_url(response.xpath("//a[@class='endless_page_link']").last[:href], base:url))
           else
             break
           end
         end
-        binding.pry
+        count = 0
+        @@items.each do |item|
+          count += 1
+          Document.create!(user_id: data[:user], name: "test #{count}", content: item)
+        end
+        # binding.pry
       end
 
       def parse_receipt_page (response, url:, data: {})
