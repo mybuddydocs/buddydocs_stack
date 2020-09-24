@@ -8,11 +8,10 @@ require("turbolinks").start();
 require("@rails/activestorage").start();
 require("channels");
 require("local-time").start();
-require("stylesheets/application.scss")
 
 window.Rails = Rails;
 
-import "bootstrap";
+import '../stylesheets/application.scss'
 import "data-confirm-modal";
 
 $(document).on("turbolinks:load", () => {

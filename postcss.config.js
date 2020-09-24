@@ -1,8 +1,9 @@
 module.exports = {
   plugins: [
-    require("tailwindcss"),
     require("postcss-import"),
     require("postcss-flexbugs-fixes"),
+    require('tailwindcss')('./app/javascript/stylesheets/tailwind.js'),
+    require('autoprefixer'),
     require("postcss-preset-env")({
       autoprefixer: {
         flexbox: "no-2009",

@@ -5,8 +5,12 @@ module.exports = {
   },
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      borderRadius: {
+        'lg': '30px'
+      }
+    },
   },
   variants: {},
-  plugins: []
+  plugins: [],
 }
