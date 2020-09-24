@@ -1,5 +1,5 @@
 class Connector < ApplicationRecord
-  validates :url, :name, presence: true
+  validates :name, presence: true
   has_one_attached :photo
 end
 
