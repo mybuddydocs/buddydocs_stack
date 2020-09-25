@@ -17,6 +17,7 @@ module Spiders
 
 
       def parse (response, url:, data: {})
+
         # set username and password to connect
         browser.fill_in 'email', with: data[:login]
         browser.fill_in 'password', with: data[:pwd]
@@ -29,29 +30,47 @@ module Spiders
           # iterate through each receipt on the first page
           response.xpath("//ul[@class='shopping-list']//a[@data-purpose='receipt-link']").each do |receipt|
             linked_url = absolute_url(receipt[:href], base:url)
-            request_to :parse_receipt_page, url: linked_url
+            request_to :parse_receipt_page, url: linked_url, data: {receipt_url: linked_url}
           end
-          # Click on button next until it desappear
+
+          # Click on button next until it desappears
           if response.xpath("//a[@class='endless_page_link']").last.inner_text == "Next"
             browser.visit(absolute_url(response.xpath("//a[@class='endless_page_link']").last[:href], base:url))
           else
             break
           end
         end
-        count = 0
+
         @@items.each do |item|
-          count += 1
-          Document.create!(user_id: data[:user], name: "test #{count}", content: item)
+          page_content = {}
+          # Save the document first with name and date from receipt
+          document = Document.new(user_id: data[:user].id, name: item[:title], date: item[:date])
+          document.save!
+
+          # page_content is used to select only HTML and css url from item object
+          page_content[:content] = item[:content]
+          page_content[:css_url] = item[:css_url]
+
+          # create one page per document
+          page = document.pages.new(content: page_content )
+          page.save!
         end
-        # binding.pry
       end
 
       def parse_receipt_page (response, url:, data: {})
         item = {}
         hrefs = []
 
+        # Store name of the receipt
+        item[:title] = response.xpath("//td[@data-purpose='course-title']").text.delete_prefix('Item')
+
+        # Store date of the receipt
+        item[:date] = response.xpath("//tr/td[2]").first.text.byteslice(7, 13)
+        # Store receipt Url
+        item[:url] = data[:receipt_url]
         # download html
         item[:content] = response.xpath("//div[@class='main-content']").inner_html
+        # binding.pry
 
         # download css url
         response.xpath("//head/link[@type='text/css']").each do |link|

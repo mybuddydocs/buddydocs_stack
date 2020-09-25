@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_24_155940) do
+ActiveRecord::Schema.define(version: 2020_09_25_141209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 2020_09_24_155940) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.jsonb "content"
+    t.string "date"
     t.index ["user_id"], name: "index_documents_on_user_id"
   end
 
@@ -110,10 +110,11 @@ ActiveRecord::Schema.define(version: 2020_09_24_155940) do
   end
 
   create_table "pages", force: :cascade do |t|
-    t.integer "page_number"
     t.bigint "document_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.jsonb "content"
+    t.integer "page_number", default: 1
     t.index ["document_id"], name: "index_pages_on_document_id"
   end
 
