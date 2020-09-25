@@ -44,7 +44,7 @@ module Spiders
         @@items.each do |item|
           page_content = {}
           # Save the document first with name and date from receipt
-          document = Document.new(user_id: data[:user].id, name: item[:title], date: item[:date])
+          document = Document.new(user_id: data[:user].id, name: item[:title], date: item[:date], url: item[:url])
           document.save!
 
           # page_content is used to select only HTML and css url from item object
@@ -65,12 +65,13 @@ module Spiders
         item[:title] = response.xpath("//td[@data-purpose='course-title']").text.delete_prefix('Item')
 
         # Store date of the receipt
-        item[:date] = response.xpath("//tr/td[2]").first.text.byteslice(7, 13)
+        # binding.pry
+        item[:date] =response.xpath("//tr/td[2]").first.text.delete_prefix('Ordered')
+
         # Store receipt Url
         item[:url] = data[:receipt_url]
         # download html
         item[:content] = response.xpath("//div[@class='main-content']").inner_html
-        # binding.pry
 
         # download css url
         response.xpath("//head/link[@type='text/css']").each do |link|
