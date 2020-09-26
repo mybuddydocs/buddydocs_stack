@@ -5,7 +5,7 @@ class Credential < ApplicationRecord
 
   def launch_connector
     if self.connector.name == "udemy_connector"
-      Spiders::SpiderUdemy.parse!(:parse, url: "https://www.udemy.com/dashboard/purchase-history/", data: {login: self.login, pwd: self.password, user: self.user})
+      Spiders::SpiderUdemy.parse!(:parse, url: self.connector.url, data: {login: self.login, pwd: self.password, user: self.user})
     end
   end
 
