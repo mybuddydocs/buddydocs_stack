@@ -1,2 +1,169 @@
-<h1>Welcome to Jumpstart!</h1>
-<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+coucou
+<div class=" relative bg-gradient-to-br from-purple-400 to-blue-400 h-screen">
+  <nav class=" flex items-center justify-between flex-wrap bg-transparent-500 p-6">
+    <div class="flex items-center flex-shrink-0 text-gray-100 mr-6">
+      <span class="font-semibold text-xl tracking-tight">BuddyDocs</span>
+    </div>
+    <div class="block lg:hidden">
+      <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white" onclick="toggle()">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </div>
+    <div id="menu" class="hidden w-full lg:flex lg:items-center lg:w-auto">
+      <div class="text-sm">
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-teal-200 mr-4">
+          Notre identié
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-teal-200 mr-4">
+          La sécurité, notre enjeu
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-teal-200 mr-4">
+          Blog
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-teal-200">
+          Contact
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class=" absolute inset-y-40 right-500 paragraph ml-2">
+    <div class="text-2xl font-bold leading-7 text-gray-100 sm:text-3xl sm:leading-9 sm:truncate">
+      BuddyDocs pour tout les docs
+    </div>
+    <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-100">
+      Lorsqu’on doit classer nos documents (pro/perso) et pire encore les trouver quand on en a besoin : on a la flemme, on ne sait pas quels documents fournir, on ne sait pas où il sont rangés, on a perdu le mot de passe du site… et on finit par remettre au lendemain. Fini la procrastination avec BuddyDocs !
+    </p>
+    <button class="modal-open mt-2 bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full">Open Modal</button>
+  </div>
+
+
+  <!--Modal-->
+  <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+    <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+
+      <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+        <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+          <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+        </svg>
+        <span class="text-sm">(Esc)</span>
+      </div>
+
+      <!-- Add margin if you want to see some of the overlay behind the modal-->
+      <div class="modal-content py-4 text-left px-6">
+        <!--Title-->
+        <div class="flex justify-between items-center pb-3">
+          <p class="text-2xl font-bold">Simple Modal!</p>
+          <div class="modal-close cursor-pointer z-50">
+            <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+              <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!--Body-->
+        <p>Modal content can go here</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+
+        <!--Footer-->
+        <div class="flex justify-end pt-2">
+          <button class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2">Action</button>
+          <button class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="wave">
+  </div>
+</div>
+<div class="bg-white h-screen">
+  <h1>Qui sommes-nous?</h1>
+  <h2>Un coffre fort 100% sécurisé</h2>
+  <h3>Seul vous avez la main sur vos docs</h3>
+  <p>Vous pouvez vous connecter à vos applications habituelles grâce à notre application et voir les document s’ajouter automatiquement chaque mois.
+
+    Si une facture papier tombe entre vos main, notre application mobile se fera un plaisir de s’en charger. </p>
+</div>
+<div class="bg-white h-screen">
+  <h2>Un agrégateur automatique</h2>
+  <h3>On récupère vos docs pour vous</h3>
+  <p>Vous pouvez vous connecter à vos applications habituelles grâce à notre application et voir les document s’ajouter automatiquement chaque mois.
+
+    Si une facture papier tombe entre vos main, notre application mobile se fera un plaisir de s’en charger. </p>
+</div>
+<div class="bg-white h-screen">
+  <h2>Un buddy administratif</h2>
+  <h3>On génère vos dossiers administratifs</h3>
+  <p>According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.</p>
+</div>
+<div class="bg-white h-screen">
+  <h2>L’application mobile BuddyDocs</h2>
+  <p>Pour ajouter des document grâce à une photo, par mail ou par scan, n’hésitez pas à télécharger notre application. Centralisez vos documents nous vous aura jamais paru aussi simple !
+  </p>
+  <div class="inline">
+    <button>download</button>
+    <button>download</button>
+  </div>
+</div>
+<div class="bg-white h-screen">
+  <p>Notre souhait est de développer un service qui joue à la fois le rôle de Coffre-Fort Numérique et celui d’Assistant Personnel Administratif pour répondre à toutes ces questions et vous proposer des services.</p>
+  <span>facebook</span>
+  <span>twitter</span>
+  <span>linkedin</span>
+  <button>About us</button>
+  <button>Contact</button>
+  <button>FAQ</button>
+</div>
+
+<script>
+  const menu = document.getElementById('menu');
+  const toggle = () => menu.classList.toggle("hidden");
+
+  var openmodal = document.querySelectorAll('.modal-open')
+  for (var i = 0; i < openmodal.length; i++) {
+    openmodal[i].addEventListener('click', function(event) {
+      event.preventDefault()
+      toggleModal()
+    })
+  }
+
+  const overlay = document.querySelector('.modal-overlay')
+  overlay.addEventListener('click', toggleModal)
+
+  var closemodal = document.querySelectorAll('.modal-close')
+  for (var i = 0; i < closemodal.length; i++) {
+    closemodal[i].addEventListener('click', toggleModal)
+  }
+
+  document.onkeydown = function(evt) {
+    evt = evt || window.event
+    var isEscape = false
+    if ("key" in evt) {
+      isEscape = (evt.key === "Escape" || evt.key === "Esc")
+    } else {
+      isEscape = (evt.keyCode === 27)
+    }
+    if (isEscape && document.body.classList.contains('modal-active')) {
+      toggleModal()
+    }
+  };
+
+
+  function toggleModal() {
+    const body = document.querySelector('body')
+    const modal = document.querySelector('.modal')
+    modal.classList.toggle('opacity-0')
+    modal.classList.toggle('pointer-events-none')
+    body.classList.toggle('modal-active')
+  }
+</script>
