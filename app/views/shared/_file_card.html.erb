@@ -1,4 +1,5 @@
 <div class="file flex-1 bg-white m-2 p-3 text-left rounded-lg h-40 hover:bg-purple-600 hover:text-white relative">
-    <h3><%= link_to category, documents_path(category: category), class: 'absolute bottom-0 left-0 h-20 ml-3'%></h3>
+    <%= category.pages %>
+    <h3><%= link_to category.name, documents_path(category: category), class: 'absolute bottom-0 left-0 h-20 ml-3'%></h3>
     <p></p>
 </div>

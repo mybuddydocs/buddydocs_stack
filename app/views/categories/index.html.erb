@@ -4,7 +4,7 @@
     <h1>Mes documents</h1>
     <div class="flex bg-gray-200">
       <% @categories.each do |category| %>
-        <%= render 'shared/file_card', category: category.name %>
+        <%= render 'shared/file_card', category: category %>
       <% end %>
     </div>
 

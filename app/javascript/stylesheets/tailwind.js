@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       borderRadius: {
-        'lg': '30px'
+        'lg': '30px',
       }
     },
     screens: {
@@ -191,14 +191,7 @@ module.exports = {
       default: theme('colors.gray.300', 'currentColor'),
     }),
     borderOpacity: theme => theme('opacity'),
-    borderRadius: {
-      none: '0',
-      sm: '0.125rem',
-      default: '0.25rem',
-      md: '0.375rem',
-      lg: '0.5rem',
-      full: '9999px',
-    },
+
     borderWidth: {
       default: '1px',
       '0': '0',
