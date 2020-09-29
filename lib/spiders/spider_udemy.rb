@@ -44,7 +44,7 @@ module Spiders
         @@items.each do |item|
           page_content = {}
           # Save the document first with name and date from receipt
-          document = Document.new(user_id: data[:user].id, name: item[:title], date: item[:date], url: item[:url])
+          document = Document.new(user_id: data[:user].id, name: "Udemy - #{item[:title]}", date: item[:date], url: item[:url])
           document.save!
 
           # page_content is used to select only HTML and css url from item object
