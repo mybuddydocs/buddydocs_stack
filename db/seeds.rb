@@ -50,17 +50,17 @@ tag16 = Tag.create!(name: 'Dépenses en ligne', category: category4)
 puts "Some tags have been created"
 
 puts "Creating new documents..."
-document1 = Document.create!(name: "Carte d'identité", user: user1)
-document2 = Document.create!(name: "Passeport", user: user1)
-document3 = Document.create!(name: "RIB", user: user1)
-document4 = Document.create!(name: "Carte vitale", user: user1)
+document1 = Document.create!(name: "Carte d'identité", user: user1, reminder_date: Date.new(2020, 12, 12))
+document2 = Document.create!(name: "Passeport", user: user1, reminder_date: Date.new(2021, 1, 9))
+document3 = Document.create!(name: "RIB", user: user1, reminder_date: Date.new(2020, 10, 17))
+document4 = Document.create!(name: "Carte vitale", user: user1, reminder_date: Date.new(2025, 5, 10))
 
 document5 = Document.create!(name: "Contrat de travail", user: user1)
 document6 = Document.create!(name: "Acte de naissance", user: user1)
 document7 = Document.create!(name: "Diplôme de Master II", user: user1)
-document8 = Document.create!(name: "Carte grise", user: user1)
-document9 = Document.create!(name: "Assurance voiture", user: user1)
-document10 = Document.create!(name: "Permis de conduire", user: user1)
+document8 = Document.create!(name: "Carte grise", user: user1, reminder_date: Date.new(2021, 1, 10))
+document9 = Document.create!(name: "Assurance voiture", user: user1, reminder_date: Date.new(2020, 11, 8))
+document10 = Document.create!(name: "Permis de conduire", user: user1, reminder_date: Date.new(2050, 6, 10))
 
 document11 = Document.create!(name: "impots-02012020", user: user1)
 document12 = Document.create!(name: "impots-02022020", user: user1)
