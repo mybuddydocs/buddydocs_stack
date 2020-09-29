@@ -1,11 +1,11 @@
 <div class="flex">
-  <div class="flex-auto text-gray-700 text-left bg-gradient-to-br from-purple-100 to-indigo-100 px-4 py-2 m-2 rounded-lg w-7/12">
+  <div class="flex-auto text-gray-700 text-left bg-gradient-to-b from-hawkes-blue-500 to-indigo-100 px-4 py-2 m-2 rounded-lg w-7/12">
       <%= render 'shared/searchbar'%>
     <div class="flex justify-between items-center">
       <h1>Mes documents</h1>
       <%= link_to 'Ajouter des documents', new_document_path, class: "bg-indigo-600 hover:bg-indigo-800 text-white font-medium text-sm py-2 px-4 rounded-full" %>
     </div>
-    <div class="flex">
+    <div class="w-full grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
       <% @categories.each do |category| %>
         <%= link_to pages_path(category: category.name) do %>
           <%= render 'shared/file_card', category: category %>
@@ -14,11 +14,14 @@
     </div>
 
     <div class="flex my-2">
-      <div class="flex-1 bg-white rounded-lg">
+      <div class="flex-1 bg-white rounded-lg pb-3 shadow">
         <h1>Mes rappels <span class="bg-red-500 rounded-full p-2 ml-3 text-white">10</span></h1>
+        <% @documents_with_reminder.first(3).each do |document| %>
+          <%= render 'shared/reminder_card', document: document %>
+        <% end %>
       </div>
       <div class="flex-1">
-        <%= Page.first(4).each { |page| page.document.name} %>
+        
       </div>
     </div>
 

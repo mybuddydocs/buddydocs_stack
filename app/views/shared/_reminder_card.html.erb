@@ -1,0 +1,9 @@
+<%= link_to document_path(document) do %>
+    <div class="w-100 grid grid-cols-4 gap-4 px-3 py-5 border border-gray-200 my-1 mx-4 rounded-md hover:bg-indigo-200 hover:text-white">
+        <h4 class="col-span-1 text-sm font-bold"><%= document.reminder_date.strftime("%m/%d/%y") %></h4>
+        <div class="col-span-2"><%= document.name %></div>
+        <div class="col-span-1 text-right text-gray-500">
+            <i class="fas fa-angle-right"></i>
+        </div>
+    </div>
+<% end %>
