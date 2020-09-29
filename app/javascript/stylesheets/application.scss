@@ -4,6 +4,8 @@
 
 @import "tailwindcss/utilities";
 
-h1 {
-  @apply m-5 text-lg font-bold ;
+@layer components {
+  h1 {
+    @apply m-5 text-lg font-bold ;
+  }
 }
