@@ -1,5 +1,6 @@
 class DocumentsController < ApplicationController
   def index
+    @documents = Document.where(user: current_user)
   end
 
   def show
