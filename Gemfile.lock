@@ -23,6 +23,14 @@ GIT
     devise-bootstrapped (0.2.0)
 
 GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: be0e82259445f0ca3ae87cd6fce6e7635a2fc6b1
+  branch: master
+  specs:
+    faker (2.14.0)
+      i18n (>= 1.6, < 2)
+
+GIT
   remote: https://github.com/rspec/rspec-core.git
   revision: 4b2ccfa1a920fb6b30038fc7550d76bfd1e2f55c
   branch: main
@@ -467,6 +475,7 @@ DEPENDENCIES
   devise_masquerade (~> 1.2)
   dotenv-rails
   factory_bot_rails
+  faker!
   font-awesome-sass (~> 5.13)
   foreman (~> 0.87.1)
   friendly_id (~> 5.3)
