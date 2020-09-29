@@ -12,6 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+dump.rdb
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
@@ -35,4 +36,3 @@
 yarn-debug.log*
 .yarn-integrity
 .env*
-dump.rdb

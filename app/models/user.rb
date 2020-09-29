@@ -10,5 +10,5 @@ class User < ApplicationRecord
   has_many :services
   has_many :team_users
   has_many :credentials
-  has_many :documents
+  has_many :documents, dependent: :destroy
 end

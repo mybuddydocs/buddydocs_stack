@@ -1,18 +1,29 @@
-<div class="bg-primary rounded-lg w-40">
-  Button
-</div>
-
-<div class="flex bg-gray-200">
-  <div class="flex-auto text-gray-700 text-center bg-gray-400 px-4 py-2 m-2 rounded-lg">
-    <h1>Mes documents</h1>
-    <div class="flex bg-gray-200">
+<div class="flex">
+  <div class="flex-auto text-gray-700 text-left bg-gradient-to-br from-purple-100 to-indigo-100 px-4 py-2 m-2 rounded-lg w-7/12">
+      <%= render 'shared/searchbar'%>
+    <div class="flex justify-between items-center">
+      <h1>Mes documents</h1>
+      <%= link_to 'Ajouter des documents', new_document_path, class: "bg-indigo-600 hover:bg-indigo-800 text-white font-medium text-sm py-2 px-4 rounded-full" %>
+    </div>
+    <div class="flex">
       <% @categories.each do |category| %>
-        <%= render 'shared/file_card', category: category.name %>
+        <%= link_to pages_path(category: category.name) do %>
+          <%= render 'shared/file_card', category: category %>
+        <% end %>
       <% end %>
     </div>
 
+    <div class="flex my-2">
+      <div class="flex-1 bg-white rounded-lg">
+        <h1>Mes rappels <span class="bg-red-500 rounded-full p-2 ml-3 text-white">10</span></h1>
+      </div>
+      <div class="flex-1">
+        <%= Page.first(4).each { |page| page.document.name} %>
+      </div>
+    </div>
+
   </div>
-  <div class="flex-auto text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+  <div class="flex-auto text-gray-700 text-center bg-gradient-to-t from-indigo-100 to-white px-4 py-2 m-2 rounded-lg">2</div>
 </div>
 
 
