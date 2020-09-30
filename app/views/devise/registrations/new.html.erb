@@ -1,29 +1,69 @@
-<div class="row">
-  <div class="col-lg-4 col-md-6 ml-auto mr-auto">
-    <h1 class="text-center">Sign Up</h1>
+<div class="h-screen  bg-no-repeat  background-login flex justify-around items-center ">
+  <div class="title hidden lg:block">
+    <h1 class="text-center text-3xl lg:text-5xl text-bluee-400 mt-4 mb-4 pb-4 font-bold ">buddydocs</h1>
+    <p class="mt-4  pb-4 max-w-2xl text-xl text-turquoise-400"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, alias at. Fugit, veniam. Est libero dicta animi perspiciatis hic illo ipsa atque quisquam earum pariatur, fuga aspernatur debitis ducimus voluptas.</p>
+  </div>
+  <div class="w-full max-w-sm  sm:bg-white sm:shadow p-4">
+    <h1 class="text-center text-3xl lg:text-5xl text-bluee-400 mt-4 mb-4 pb-4 font-bold ">S'inscrire</h1>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
+    <%= devise_error_messages! %>
 
-      <div class="form-group">
-        <%= f.text_field :name, autofocus: true, class: 'form-control', placeholder: "Full Name" %>
-      </div>
+    <div class="mb-4 flex items-center shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      <%= f.label :name do %>
+      <svg class='mr-2' width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23.0208 4.35033H17.3333V4.07936C17.3333 3.03398 16.4829 2.18359 15.4375 2.18359H10.5625C9.51712 2.18359 8.66673 3.03398 8.66673 4.07936V4.35033H2.97923C1.33578 4.35033 0 5.68591 0 7.32936V20.8711C0 22.5145 1.33578 23.8503 2.97923 23.8503H23.0208C24.6642 23.8503 26 22.5145 26 20.8711V7.32936C26 5.68591 24.6642 4.35033 23.0208 4.35033ZM15.1677 6.51686H10.8333V4.35033H15.1667L15.1677 6.51686ZM8.125 9.76686C9.61789 9.76686 10.8333 10.9824 10.8333 12.4753C10.8333 13.968 9.61789 15.1836 8.125 15.1836C6.63211 15.1836 5.41673 13.968 5.41673 12.4753C5.41673 10.9824 6.63211 9.76686 8.125 9.76686ZM13 19.7878C13 20.2363 12.636 20.6003 12.1875 20.6003H4.0625C3.614 20.6003 3.25 20.2363 3.25 19.7878V19.2461C3.25 17.6026 4.58578 16.2669 6.22923 16.2669H10.0208C11.6642 16.2669 13 17.6026 13 19.2461V19.7878ZM21.9375 20.6003H15.9792C15.5307 20.6003 15.1667 20.2363 15.1667 19.7878C15.1667 19.3393 15.5307 18.9753 15.9792 18.9753H21.9375C22.386 18.9753 22.75 19.3393 22.75 19.7878C22.75 20.2363 22.386 20.6003 21.9375 20.6003ZM21.9375 16.2669H15.9792C15.5307 16.2669 15.1667 15.9029 15.1667 15.4544C15.1667 15.0059 15.5307 14.6419 15.9792 14.6419H21.9375C22.386 14.6419 22.75 15.0059 22.75 15.4544C22.75 15.9029 22.386 16.2669 21.9375 16.2669ZM21.9375 11.9336H15.9792C15.5307 11.9336 15.1667 11.5696 15.1667 11.1211C15.1667 10.6726 15.5307 10.3086 15.9792 10.3086H21.9375C22.386 10.3086 22.75 10.6726 22.75 11.1211C22.75 11.5696 22.386 11.9336 21.9375 11.9336Z" fill="#C4C4C4" />
+      </svg>
+      <% end %>
+      <%= f.text_field :name, autofocus: true, class: 'flex-grow focus:outline-none p-4', placeholder: "Nom" %>
+    </div>
 
-      <div class="form-group">
-        <%= f.email_field :email, autofocus: false, class: 'form-control', placeholder: "Email Address" %>
-      </div>
+    <div class="mb-4 flex items-center shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      <%= f.label :email do %>
+      <svg class='mr-2 ' width=" 20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.0711 2.92895C15.1823 1.0402 12.6711 0 10 0C7.32887 0 4.81766 1.0402 2.92887 2.92895C1.04016 4.8177 0 7.32891 0 10C0 12.6711 1.04016 15.1823 2.92887 17.0711C4.81766 18.9598 7.32887 20 10 20C10.3236 20 10.5859 19.7377 10.5859 19.4141C10.5859 19.0905 10.3236 18.8281 10 18.8281C5.13215 18.8281 1.17188 14.8679 1.17188 10C1.17188 5.13215 5.13215 1.17188 10 1.17188C14.8678 1.17188 18.8281 5.13215 18.8281 10V12.3535C18.8281 13.3282 18.0352 14.1211 17.0605 14.1211C16.0859 14.1211 15.293 13.3282 15.293 12.3535V10C15.293 7.08145 12.9186 4.70703 10 4.70703C7.08145 4.70703 4.70703 7.08145 4.70703 10C4.70703 12.9186 7.08145 15.293 10 15.293C11.7311 15.293 13.2707 14.4576 14.237 13.1688C14.5914 14.3941 15.7226 15.293 17.0605 15.293C18.6814 15.293 20 13.9743 20 12.3535V10C20 7.32891 18.9598 4.8177 17.0711 2.92895ZM10 14.1211C7.72758 14.1211 5.87891 12.2724 5.87891 10C5.87891 7.72762 7.72758 5.87891 10 5.87891C12.2724 5.87891 14.1211 7.72762 14.1211 10C14.1211 12.2724 12.2724 14.1211 10 14.1211Z" fill="#B7B6CC" />
+      </svg>
+      <% end %>
+      <%= f.email_field :email, autofocus: false, class: 'flex-grow focus:outline-none p-4', placeholder: "Email" %>
+    </div>
 
-      <div class="form-group">
-        <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password' %>
-      </div>
+    <div class="mb-4 flex items-center shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      <%= f.label :email do %>
+      <svg class='mr-2 ' width=" 22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+          <path d="M17.0372 4.01562C16.8078 4.01562 16.5784 4.10296 16.4037 4.2776C16.0545 4.62687 16.0545 5.19526 16.4037 5.54453C16.753 5.8938 17.3214 5.8938 17.6707 5.54453C18.0199 5.19526 18.0199 4.62687 17.6707 4.2776C17.496 4.10292 17.2666 4.01562 17.0372 4.01562Z" fill="#C4C4C4" />
+          <path d="M20.133 1.81524C18.9624 0.644638 17.4061 0 15.7506 0C14.0951 0 12.5387 0.644638 11.3682 1.81524C10.3662 2.81719 9.75234 4.08944 9.59292 5.49442C9.44463 6.80111 9.71902 8.13478 10.3667 9.26963L0.0518188 19.5845L2.36376 21.8965L3.57171 20.6885L4.88329 22L7.04437 19.839L5.73278 18.5274L7.35138 16.9088L8.66297 18.2204L10.824 16.0593L9.51245 14.7477L12.6786 11.5816C13.8135 12.2292 15.147 12.5035 16.4539 12.3554C17.8588 12.1959 19.131 11.582 20.133 10.5801C21.3036 9.40949 21.9483 7.85312 21.9483 6.19769C21.9482 4.54221 21.3036 2.9858 20.133 1.81524ZM18.5835 6.45725C18.1572 6.88355 17.5972 7.09673 17.0372 7.09673C16.4772 7.09673 15.9173 6.88355 15.4909 6.45725C14.6383 5.60463 14.6383 4.21735 15.4909 3.36473C16.3436 2.5121 17.7308 2.5121 18.5835 3.36473C19.436 4.21735 19.436 5.60467 18.5835 6.45725Z" fill="#C4C4C4" />
+        </g>
+        <defs>
+          <clipPath id="clip0">
+            <rect width="22" height="22" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "off", class: 'flex-grow focus:outline-none p-4', placeholder: 'Mot de Passe' %>
+    </div>
 
-      <div class="form-group">
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirm Password' %>
-      </div>
+    <div class="flex items-center shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      <%= f.label :email do %>
+      <svg class='mr-2 ' width=" 22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+          <path d="M17.0372 4.01562C16.8078 4.01562 16.5784 4.10296 16.4037 4.2776C16.0545 4.62687 16.0545 5.19526 16.4037 5.54453C16.753 5.8938 17.3214 5.8938 17.6707 5.54453C18.0199 5.19526 18.0199 4.62687 17.6707 4.2776C17.496 4.10292 17.2666 4.01562 17.0372 4.01562Z" fill="#C4C4C4" />
+          <path d="M20.133 1.81524C18.9624 0.644638 17.4061 0 15.7506 0C14.0951 0 12.5387 0.644638 11.3682 1.81524C10.3662 2.81719 9.75234 4.08944 9.59292 5.49442C9.44463 6.80111 9.71902 8.13478 10.3667 9.26963L0.0518188 19.5845L2.36376 21.8965L3.57171 20.6885L4.88329 22L7.04437 19.839L5.73278 18.5274L7.35138 16.9088L8.66297 18.2204L10.824 16.0593L9.51245 14.7477L12.6786 11.5816C13.8135 12.2292 15.147 12.5035 16.4539 12.3554C17.8588 12.1959 19.131 11.582 20.133 10.5801C21.3036 9.40949 21.9483 7.85312 21.9483 6.19769C21.9482 4.54221 21.3036 2.9858 20.133 1.81524ZM18.5835 6.45725C18.1572 6.88355 17.5972 7.09673 17.0372 7.09673C16.4772 7.09673 15.9173 6.88355 15.4909 6.45725C14.6383 5.60463 14.6383 4.21735 15.4909 3.36473C16.3436 2.5121 17.7308 2.5121 18.5835 3.36473C19.436 4.21735 19.436 5.60467 18.5835 6.45725Z" fill="#C4C4C4" />
+        </g>
+        <defs>
+          <clipPath id="clip0">
+            <rect width="22" height="22" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+      <% end %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'flex-grow focus:outline-none p-4', placeholder: 'Confirmer le mot de passe' %>
+    </div>
 
-      <div class="form-group">
-        <%= f.submit "Sign up", class: "btn btn-primary btn-block btn-lg" %>
-      </div>
+    <div class="">
+      <%= f.submit "S'inscrire", class: "mx-0 btn w-full my-4  hover:bg-blue-400" %>
+    </div>
     <% end %>
 
     <div class="text-center">

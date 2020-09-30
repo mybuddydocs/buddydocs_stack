@@ -1,0 +1,13 @@
+.title-homepage-h2 {
+  @apply text-2xl font-bold leading-7 text-bluee-400;
+}
+.title-homepage-h3 {
+  @apply text-2xl font-bold leading-7 text-gray-400;
+}
+.homepage-p {
+  @apply mt-4 max-w-2xl text-xl leading-7 text-gray-400;
+}
+
+.font-assistant {
+  font-family: Assistant;
+}

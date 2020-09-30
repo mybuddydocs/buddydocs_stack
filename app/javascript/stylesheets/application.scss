@@ -1,11 +1,21 @@
 @import "tailwindcss/base";
 
+@font-face {
+  font-family: 'Cabin Sketch';
+  font-style: bold;
+  font-weight: 400;
+  src: local('cursive'), url(./fonts/CabinSketch-Bold.ttf) format('ttf');
+}
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+@import "components/button";
+@import "components/homepage";
+
 
 @layer components {
   h1 {
     @apply m-5 text-lg font-bold ;
   }
 }
+
