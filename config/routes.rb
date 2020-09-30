@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :documents, only: [:new, :create, :edit, :update]
   resources :pages
 
+
   namespace :admin do
     resources :users
     resources :services

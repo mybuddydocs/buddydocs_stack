@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <%= render 'shared/head' %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
-  <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/notices' %>
+<head>
+  <%= render 'shared/head' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&family=Cabin&display=swap" rel="stylesheet">
+</head>
 
-    <div class="container">
-      <%= yield %>
-    </div>
+<body>
+  <% if user_signed_in? %>
+  <%= render 'shared/navbar' %>
+  <% end %>
+  <%= render 'shared/notices' %>
 
-    <%= render 'shared/footer' %>
-  </body>
+  <%
+=begin%>
+  <div class="container">
+    <%
+=end%>
+    <%= yield %>
+    <%
+=begin%>
+  </div>
+  <%
+=end%>
+
+  <%= render 'shared/footer' %>
+</body>
+
 </html>
