@@ -1,6 +1,9 @@
 class Connector < ApplicationRecord
-  validates :url, presence: true
+  has_many :credentials
+  # has_one_attached :photo
   validates :name, presence: true
-  has_one_attached :photo
+
+
+
 end
 

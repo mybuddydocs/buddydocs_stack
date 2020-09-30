@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_22_091430) do
+ActiveRecord::Schema.define(version: 2020_09_29_155355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,19 +52,21 @@ ActiveRecord::Schema.define(version: 2020_09_22_091430) do
   end
 
   create_table "connectors", force: :cascade do |t|
-    t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.boolean "available", default: true
+    t.string "url"
   end
 
   create_table "credentials", force: :cascade do |t|
-    t.string "url"
     t.string "password"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "connector_id", null: false
+    t.string "login"
+    t.index ["connector_id"], name: "index_credentials_on_connector_id"
     t.index ["user_id"], name: "index_credentials_on_user_id"
   end
 
@@ -82,6 +84,13 @@ ActiveRecord::Schema.define(version: 2020_09_22_091430) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "date"
+    t.string "url"
+<<<<<<< HEAD
+    t.date "reminder_date"
+=======
+    t.string "origin"
+>>>>>>> master
     t.index ["user_id"], name: "index_documents_on_user_id"
   end
 
@@ -108,10 +117,11 @@ ActiveRecord::Schema.define(version: 2020_09_22_091430) do
   end
 
   create_table "pages", force: :cascade do |t|
-    t.integer "page_number"
     t.bigint "document_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.jsonb "content"
+    t.integer "page_number", default: 1
     t.index ["document_id"], name: "index_pages_on_document_id"
   end
 
@@ -178,6 +188,7 @@ ActiveRecord::Schema.define(version: 2020_09_22_091430) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "credentials", "connectors"
   add_foreign_key "credentials", "users"
   add_foreign_key "document_tags", "documents"
   add_foreign_key "document_tags", "tags"

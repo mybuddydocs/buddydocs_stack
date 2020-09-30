@@ -2,3 +2,13 @@
     clip-path: polygon(100% 0, 66% 0%, 58% 8%, 0 8%, 0 100%, 100% 100%);
 }
 
+.file:hover {
+    color: white;
+    path {
+        fill: #6C63FF;
+    }
+    p {
+        color: white;
+    }
+}
+

@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <%= render 'shared/head' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&family=Cabin&display=swap" rel="stylesheet">
+  </head>
 
-<head>
-  <%= render 'shared/head' %>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&family=Cabin&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <% if user_signed_in? %>
+    <%= render 'shared/navbar' %>
+    <% end %>
+    <%= render 'shared/notices' %>
 
-<body>
-  <% if user_signed_in? %>
-  <%= render 'shared/navbar' %>
-  <% end %>
-  <%= render 'shared/notices' %>
-
-  <%
-=begin%>
-  <div class="container">
-    <%
-=end%>
-    <%= yield %>
     <%
 =begin%>
-  </div>
-  <%
+    <div class="container mx-auto pt-2">
+      <%
+=end%>
+      <%= yield %>
+      <%
+=begin%>
+    </div>
+    <%
 =end%>
 
-  <%= render 'shared/footer' %>
-</body>
+    <%= render 'shared/footer' %>
+  </body>
 
 </html>

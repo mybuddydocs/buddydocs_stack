@@ -9,7 +9,13 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
-
 @import "components/button";
 @import "components/homepage";
+
+
+@layer components {
+  h1 {
+    @apply m-5 text-lg font-bold ;
+  }
+}
 
