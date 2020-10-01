@@ -9,7 +9,7 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install google-chrome-stable
 addons:
-  postgresql: "12"
+  postgresql: "9.6"
 before_script:
   - psql -c 'create database buddydocs_stack_test;' -U postgres
 script:
