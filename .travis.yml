@@ -18,3 +18,6 @@ script:
   - SECRET_KEY_BASE=a RAILS_ENV=test bundle exec rake assets:precompile
   - bundle exec rake test
   - bundle exec rake test:system
+test:
+  adapter: postgresql
+  database: buddydocs_stack_test
