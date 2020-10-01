@@ -1,0 +1,21 @@
+language: ruby
+cache:
+  bundler: true
+  yarn: true
+services:
+  - redis-server
+sudo: required
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install google-chrome-stable
+addons:
+  postgresql: "9.6"
+before_script:
+  - psql -c 'create database buddydocs_stack_test;' -U postgres
+  - bundle exec rails db:create
+  - bundle exec rails db:migrate
+script:
+  - bundle exec rspec spec
+test:
+  adapter: postgresql
+  database: buddydocs_stack_test
