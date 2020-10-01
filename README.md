@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+[![Build Status](https://travis-ci.com/mybuddydocs/buddydocs_stack.svg?token=g9ykjDG4gKqnsxgvA8om&branch=master)](https://travis-ci.com/mybuddydocs/buddydocs_stack)
