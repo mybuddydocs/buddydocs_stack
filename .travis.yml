@@ -12,11 +12,13 @@ addons:
   postgresql: "9.6"
 before_script:
   - psql -c 'create database buddydocs_stack_test;' -U postgres
+  - bundle exec rails db:create
+  - bundle exec rails db:migrate
 script:
-  - bundle exec rake db:schema:load
+  # - bundle exec rake db:schema:load
   - bundle exec rspec spec
-  - SECRET_KEY_BASE=a RAILS_ENV=test bundle exec rake assets:precompile
-  - bundle exec rake test:system
+  # - SECRET_KEY_BASE=a RAILS_ENV=production bundle exec rake assets:precompile
+  # - bundle exec rake test:system
 test:
   adapter: postgresql
   database: buddydocs_stack_test
