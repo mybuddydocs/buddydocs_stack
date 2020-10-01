@@ -86,8 +86,8 @@ ActiveRecord::Schema.define(version: 2020_09_29_155355) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "date"
     t.string "url"
-    t.date "reminder_date"
     t.string "origin"
+    t.date "reminder_date"
     t.index ["user_id"], name: "index_documents_on_user_id"
   end
 
