@@ -16,7 +16,6 @@ script:
   - bundle exec rake db:schema:load
   - bundle exec rspec spec
   - SECRET_KEY_BASE=a RAILS_ENV=test bundle exec rake assets:precompile
-  - bundle exec rake test
   - bundle exec rake test:system
 test:
   adapter: postgresql
