@@ -102,6 +102,13 @@ module.exports = {
                 800: '#005D73',
                 900: '#003E4D',
             },
+            turquoise: {
+              400: '#71DDFB',
+              500: '#B7E6FF',
+            },
+            bluee: {
+              400: "#4F79A4",
+            },
             indigo: {
                 50: '#F8F7FF',
                 100: '#F0F0FF',
@@ -294,6 +301,8 @@ module.exports = {
         },
         height: theme => ({
             auto: 'auto',
+            '40v': '40vh',
+            '60v': '60vh',
             ...theme('spacing'),
             full: '100%',
             screen: '100vh',
