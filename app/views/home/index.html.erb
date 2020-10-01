@@ -31,15 +31,15 @@
   </nav>
   <div class="flex mt-16 lg:mt-0 lg:items-center justify-center h-full">
     <div class="flex flex-col justify-center m-2 ml-4 h-40v lg:mb-32">
-      <div class=" text-3xl lg:text-5xl mb-2 pb-4 font-bold  text-gray-100">
+      <h1 class=" text-3xl lg:text-5xl mb-2 pb-4 font-bold  text-gray-100 ml-0">
         BuddyDocs pour tout les docs
-      </div>
+      </h1>
       <p class="mt-4  pb-4 max-w-2xl text-xl text-turquoise-400">
         Lorsqu’on doit classer nos documents (pro/perso) et pire encore les trouver quand on en a besoin : on a la flemme, on ne sait pas quels documents fournir, on ne sait pas où il sont rangés, on a perdu le mot de passe du site… et on finit par remettre au lendemain. Fini la procrastination avec BuddyDocs !
       </p>
       <div class="my-4">
-        <%= link_to "S'inscrire", new_user_registration_path, class: "btn hover:bg-blue-400" %>
-        <%= link_to "Se connecter", new_user_session_path, class: "btn hover:bg-blue-400" %>
+        <%= link_to "S'inscrire", new_user_registration_path, class: "btn btn-secondary hover:bg-blue-500" %>
+        <%= link_to "Se connecter", new_user_session_path, class: "btn btn-secondary hover:bg-blue-500" %>
         <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
       </div>
     </div>
@@ -52,7 +52,7 @@
 
 <div class="background-2">
   <div class="h-screen">
-    <h1 class="text-center text-3xl lg:text-5xl text-bluee-400 mt-4 mb-4 pb-4 font-bold ">Qui sommes-nous?</h1>
+    <h2 class="text-center text-3xl lg:text-5xl text-bluee-400 mt-4 mb-4 pb-4 font-bold ">Qui sommes-nous?</h2>
     <div class="flex items-center justify-center  h-full">
       <div>
         <%= image_tag  "homepage/homepage2.png", class: 'h-40v hidden lg:block'%>
@@ -104,15 +104,29 @@
         <h2 class="title-homepage-h2 font-cursive sm:text-3xl sm:leading-9 sm:truncate">L’application mobile BuddyDocs</h2>
         <p class="mt-4 max-w-2xl text-xl leading-7 text-turquoise-500">Pour ajouter des document grâce à une photo, par mail ou par scan, n’hésitez pas à télécharger notre application. Centralisez vos documents nous vous aura jamais paru aussi simple !
         </p>
-        <div class="inline">
-          <button>download</button>
-          <button>download</button>
+        <div class="flex my-4">
+          <%= link_to  "https://store.google.com/fr/?gclid=CjwKCAjw_NX7BRA1EiwA2dpg0u_GUrh7rBS494uo5ocleZL2mNYM8FQ_tCcCnFASNM8FvHrNN9-tnxoCNwIQAvD_BwE&gclsrc=aw.ds", class: 'flex btn btn-download hover:bg-bluee-600' do%>
+          <svg class='mr-2' width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.64551 8.10254V13.54C3.64551 13.915 3.52051 14.2275 3.27051 14.4775C3.02051 14.7275 2.70801 14.8525 2.33301 14.8525C1.95801 14.8525 1.62988 14.7275 1.34863 14.4775C1.06738 14.2275 0.926758 13.915 0.926758 13.54V8.10254C0.926758 7.75879 1.06738 7.46191 1.34863 7.21191C1.62988 6.96191 1.94238 6.83691 2.28613 6.83691C2.66113 6.83691 2.97363 6.96191 3.22363 7.21191C3.50488 7.46191 3.64551 7.75879 3.64551 8.10254ZM4.11426 15.4619C4.11426 15.8682 4.25488 16.2119 4.53613 16.4932C4.81738 16.7432 5.14551 16.8682 5.52051 16.8682H6.45801V19.7275C6.45801 20.29 6.67676 20.665 7.11426 20.8525C7.55176 21.0713 7.97363 21.0713 8.37988 20.8525C8.81738 20.6338 9.03613 20.2588 9.03613 19.7275V16.8682H10.8174V19.7275C10.8174 20.29 11.0205 20.665 11.4268 20.8525C11.8643 21.0713 12.3018 21.0713 12.7393 20.8525C13.1768 20.665 13.3955 20.29 13.3955 19.7275V16.8682H14.333C14.708 16.8682 15.0361 16.7432 15.3174 16.4932C15.5986 16.2119 15.7393 15.8682 15.7393 15.4619V7.07129H4.11426V15.4619ZM15.7393 6.60254H4.06738C4.06738 5.63379 4.33301 4.74316 4.86426 3.93066C5.42676 3.08691 6.16113 2.43066 7.06738 1.96191L6.17676 0.321289C6.11426 0.196289 6.12988 0.118164 6.22363 0.0869141C6.34863 0.0244141 6.42676 0.0400391 6.45801 0.133789L7.39551 1.77441C8.20801 1.43066 9.05176 1.25879 9.92676 1.25879C10.833 1.25879 11.6768 1.43066 12.458 1.77441L13.3955 0.133789C13.4268 0.0400391 13.4893 0.0244141 13.583 0.0869141C13.708 0.118164 13.7393 0.196289 13.6768 0.321289L12.7861 1.96191C13.6924 2.43066 14.4111 3.08691 14.9424 3.93066C15.4736 4.74316 15.7393 5.63379 15.7393 6.60254ZM7.77051 4.02441C7.77051 3.89941 7.72363 3.79004 7.62988 3.69629C7.53613 3.57129 7.41113 3.50879 7.25488 3.50879C7.12988 3.50879 7.02051 3.57129 6.92676 3.69629C6.83301 3.79004 6.78613 3.89941 6.78613 4.02441C6.78613 4.14941 6.83301 4.25879 6.92676 4.35254C7.02051 4.44629 7.12988 4.49316 7.25488 4.49316C7.41113 4.49316 7.53613 4.44629 7.62988 4.35254C7.72363 4.25879 7.77051 4.14941 7.77051 4.02441ZM13.0674 4.02441C13.0674 3.89941 13.0205 3.79004 12.9268 3.69629C12.833 3.57129 12.7236 3.50879 12.5986 3.50879C12.4736 3.50879 12.3486 3.57129 12.2236 3.69629C12.1299 3.79004 12.083 3.89941 12.083 4.02441C12.083 4.14941 12.1299 4.25879 12.2236 4.35254C12.3486 4.44629 12.4736 4.49316 12.5986 4.49316C12.7236 4.49316 12.833 4.44629 12.9268 4.35254C13.0205 4.25879 13.0674 4.14941 13.0674 4.02441ZM17.5205 6.83691C17.1768 6.83691 16.8643 6.96191 16.583 7.21191C16.333 7.46191 16.208 7.77441 16.208 8.14941V13.54C16.208 13.915 16.333 14.2275 16.583 14.4775C16.8643 14.7275 17.1768 14.8525 17.5205 14.8525C17.8955 14.8525 18.2236 14.7275 18.5049 14.4775C18.7861 14.2275 18.9268 13.915 18.9268 13.54V8.10254C18.9268 7.75879 18.7861 7.46191 18.5049 7.21191C18.2236 6.96191 17.8955 6.83691 17.5205 6.83691Z" fill="white" />
+          </svg>
+          <div>
+            Google Store
+          </div>
+          <% end %>
+          <%= link_to  "https://www.apple.com/fr/ios/app-store/", class: 'flex btn btn-download hover:bg-bluee-600' do%>
+          <svg class='mr-2' width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.1926 11.1494C15.1614 9.43066 15.9426 8.10254 17.5364 7.16504C16.6614 5.91504 15.3333 5.21191 13.552 5.05566C13.0833 5.02441 12.552 5.08691 11.9583 5.24316C11.6145 5.33691 11.1458 5.49316 10.552 5.71191C9.95825 5.93066 9.56763 6.04004 9.38013 6.04004C9.19263 6.04004 8.77075 5.91504 8.1145 5.66504C7.08325 5.29004 6.31763 5.10254 5.81763 5.10254C4.91138 5.13379 4.03638 5.38379 3.19263 5.85254C2.38013 6.32129 1.72388 7.00879 1.22388 7.91504C0.692627 8.88379 0.427002 10.04 0.427002 11.3838C0.427002 12.6025 0.645752 13.8682 1.08325 15.1807C1.33325 15.8682 1.69263 16.6338 2.16138 17.4775C2.75513 18.5088 3.34888 19.3213 3.94263 19.915C4.72388 20.6963 5.45825 21.0713 6.14575 21.04C6.4895 21.04 6.9895 20.915 7.64575 20.665C8.45825 20.3525 9.13013 20.1963 9.66138 20.1963C10.1926 20.1963 10.8333 20.3369 11.5833 20.6182C12.2708 20.8994 12.8333 21.04 13.2708 21.04C14.2708 21.0088 15.2864 20.29 16.3176 18.8838C17.0989 17.79 17.677 16.6494 18.052 15.4619C16.802 14.8682 15.9583 13.9932 15.5208 12.8369C15.2708 12.2744 15.1614 11.7119 15.1926 11.1494ZM12.5208 3.41504C13.3645 2.41504 13.7395 1.29004 13.6458 0.0400391C13.0833 0.0712891 12.5051 0.243164 11.9114 0.555664C11.3176 0.868164 10.8333 1.24316 10.4583 1.68066C9.552 2.68066 9.16138 3.80566 9.28638 5.05566C10.4426 5.14941 11.5208 4.61816 12.5208 3.46191V3.41504Z" fill="white" />
+          </svg>
+          <div>
+            Apple Store
+          </div>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="h-screen">
+  <div class=" h-screen">
     <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-900">Notre souhait est de développer un service qui joue à la fois le rôle de Coffre-Fort Numérique et celui d’Assistant Personnel Administratif pour répondre à toutes ces questions et vous proposer des services.</p>
     <span>facebook</span>
     <span>twitter</span>

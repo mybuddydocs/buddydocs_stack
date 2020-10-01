@@ -47,6 +47,7 @@ module.exports = {
                 900: '#742a2a',
             },
             orange: {
+                50:'#E95B40',
                 100: '#fffaf0',
                 200: '#feebc8',
                 300: '#fbd38d',
@@ -58,6 +59,7 @@ module.exports = {
                 900: '#7b341e',
             },
             yellow: {
+                50: '#F9CA40',
                 100: '#fffff0',
                 200: '#fefcbf',
                 300: '#faf089',
@@ -108,6 +110,8 @@ module.exports = {
             },
             bluee: {
               400: "#4F79A4",
+              500: '#6FAAFC',
+              600: '#599ff9',
             },
             indigo: {
                 50: '#F8F7FF',
@@ -122,6 +126,7 @@ module.exports = {
                 900: '#201F4D',
             },
             purple: {
+                50:'#6D6AFD',
                 100: '#faf5ff',
                 200: '#e9d8fd',
                 300: '#d6bcfa',
