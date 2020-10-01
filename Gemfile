@@ -36,6 +36,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
+  gem 'simplecov', require: false, group: :test
   gem 'rails-controller-testing'
 
   %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
