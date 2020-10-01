@@ -1,3 +1,26 @@
 .btn {
-  @apply text-white bg-turquoise-400 text-xl px-6 py-3 rounded-full mx-4
+  @apply text-white text-xl px-6 py-3 rounded-full mx-4
 }
+
+.btn-primary {
+  @apply bg-purple-50
+}
+
+.btn-secondary {
+  @apply bg-turquoise-400
+}
+
+.btn-warning {
+  @apply bg-yellow-50
+}
+
+.btn-danger {
+  @apply bg-orange-50
+}
+
+.btn-download {
+  @apply bg-bluee-500
+}
+
+
+

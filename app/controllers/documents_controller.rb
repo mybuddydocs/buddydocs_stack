@@ -7,9 +7,12 @@ class DocumentsController < ApplicationController
   end
 
   def new
+    @document = Document.new
   end
 
   def create
+    @document = Document.new(document_params)
+
   end
 
   def edit
@@ -20,4 +23,10 @@ class DocumentsController < ApplicationController
 
   def destroy
   end
+
+  private
+  def document_params
+    params.require(:document).permit(:)
+  end
+
 end
