@@ -870,16 +870,16 @@
           null,
           1,
           1,
-          9,
-          9,
+          0,
+          0,
           null,
           1,
-          9,
-          9,
+          0,
+          0,
           null,
           null,
-          10,
-          10,
+          1,
+          1,
           null,
           null,
           1,
@@ -1047,11 +1047,11 @@
           1,
           1,
           null,
-          1,
-          2,
-          2,
+          0,
+          0,
+          0,
           null,
-          2,
+          0,
           null,
           null,
           null,
@@ -1066,29 +1066,11 @@
           null
         ]
       },
-      "/home/marceau/code/marceau21/buddydocs_stack/app/controllers/documents_controller.rb": {
+      "/home/marceau/code/marceau21/buddydocs_stack/app/controllers/connectors_controller.rb": {
         "lines": [
           1,
           1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
+          0,
           null,
           null
         ]
@@ -1122,25 +1104,6 @@
           null
         ]
       },
-      "/home/marceau/code/marceau21/buddydocs_stack/spec/models/connector_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
       "/home/marceau/code/marceau21/buddydocs_stack/app/models/connector.rb": {
         "lines": [
           1,
@@ -1153,80 +1116,8 @@
           null,
           null
         ]
-      },
-      "/home/marceau/code/marceau21/buddydocs_stack/spec/models/document_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          7,
-          null,
-          1,
-          6,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/marceau/code/marceau21/buddydocs_stack/app/models/document.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null
-        ]
-      },
-      "/home/marceau/code/marceau21/buddydocs_stack/spec/views/categories/index.html.erb_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/marceau/code/marceau21/buddydocs_stack/spec/views/connectors/index.html.erb_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1601562167
+    "timestamp": 1601567503
   }
 }
