@@ -14,7 +14,7 @@ before_script:
   - psql -c 'create database buddydocs_stack_test;' -U postgres
 script:
   - bundle exec rake db:schema:load
-  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec
   - SECRET_KEY_BASE=a RAILS_ENV=test bundle exec rake assets:precompile
   - bundle exec rake test
   - bundle exec rake test:system
