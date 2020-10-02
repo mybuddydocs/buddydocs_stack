@@ -870,16 +870,16 @@
           null,
           1,
           1,
-          2,
-          2,
+          3,
+          3,
           null,
           1,
-          2,
-          2,
-          null,
-          null,
           3,
           3,
+          null,
+          null,
+          4,
+          4,
           null,
           null,
           1,
@@ -1045,6 +1045,29 @@
           null
         ]
       },
+      "/home/marceau/code/marceau21/buddydocs_stack/spec/support/database_cleaner.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
       "/home/marceau/code/marceau21/buddydocs_stack/spec/support/controller_macros.rb": {
         "lines": [
           1,
@@ -1073,7 +1096,7 @@
         "lines": [
           1,
           1,
-          0,
+          1,
           null,
           null,
           1,
@@ -1148,6 +1171,6 @@
         ]
       }
     },
-    "timestamp": 1601647749
+    "timestamp": 1601648517
   }
 }

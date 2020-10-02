@@ -167,6 +167,7 @@ GEM
     concurrent-ruby (1.1.7)
     connection_pool (2.2.3)
     crass (1.0.6)
+    database_cleaner (1.8.5)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
     devise (4.7.3)
@@ -482,6 +483,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   cloudinary (~> 1.16.0)
+  database_cleaner
   devise (~> 4.7, >= 4.7.1)
   devise-bootstrapped!
   devise_masquerade (~> 1.2)
