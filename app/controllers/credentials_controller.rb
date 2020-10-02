@@ -1,6 +1,6 @@
 class CredentialsController < ApplicationController
 
-  def Index
+  def index
     @credentials = Credential.where(user: current_user)
   end
 end
