@@ -1,5 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe Credential, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:john) {create(:user)}
+  let(:cdiscount) {create(:connector)}
+
+  subject { create(:credential, user: john, connector: cdiscount)}
+
+  it 'is valid with valid attributes' do
+    expect(subject).to be_valid
+  end
+  it 'is invalid without a login' do
+    subject.login = nil
+    expect(subject).not_to be_valid
+  end
+  it 'is invalid without a password' do
+    subject.password = nil
+    expect(subject).not_to be_valid
+  end
 end

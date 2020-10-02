@@ -863,10 +863,27 @@
           1,
           1,
           1,
-          0,
-          0,
+          1,
+          1,
+          null,
+          2,
+          null,
+          null
+        ]
+      },
+      "/home/marceau/code/marceau21/buddydocs_stack/spec/factories/credential.rb": {
+        "lines": [
           null,
           1,
+          1,
+          1,
+          5,
+          5,
+          null,
+          1,
+          5,
+          5,
+          null,
           null,
           null
         ]
@@ -884,16 +901,16 @@
           null,
           1,
           1,
-          6,
-          6,
+          2,
+          2,
           null,
           1,
-          6,
-          6,
+          2,
+          2,
           null,
           null,
-          7,
-          7,
+          3,
+          3,
           null,
           null,
           1,
@@ -913,18 +930,18 @@
           1,
           1,
           1,
-          6,
-          6,
+          0,
+          0,
           null,
           1,
-          6,
-          6,
+          0,
+          0,
           null,
-          7,
-          7,
           1,
-          6,
-          6,
+          1,
+          1,
+          0,
+          0,
           null,
           null,
           null
@@ -936,6 +953,7 @@
           null,
           1,
           null,
+          1,
           1,
           1,
           1,
@@ -1058,6 +1076,12 @@
           null
         ]
       },
+      "/home/marceau/code/marceau21/buddydocs_stack/app/helpers/credentials_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/home/marceau/code/marceau21/buddydocs_stack/app/helpers/documents_helper.rb": {
         "lines": [
           1,
@@ -1091,15 +1115,15 @@
           null,
           null,
           1,
-          6,
+          2,
           null,
           null,
           1,
-          6,
+          2,
           null,
           null,
           1,
-          6,
+          2,
           null,
           null,
           null
@@ -1129,20 +1153,75 @@
           null
         ]
       },
-      "/home/marceau/code/marceau21/buddydocs_stack/app/models/document.rb": {
+      "/home/marceau/code/marceau21/buddydocs_stack/app/controllers/credentials_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/marceau/code/marceau21/buddydocs_stack/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/marceau/code/marceau21/buddydocs_stack/app/models/connector.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/marceau/code/marceau21/buddydocs_stack/app/models/credential.rb": {
+        "lines": [
           1,
           1,
           1,
           1,
           null,
           1,
+          0,
+          0,
+          null,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1601652464
+    "timestamp": 1601653902
   }
 }
