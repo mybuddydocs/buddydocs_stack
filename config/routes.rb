@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :team_documents, only: [:index, :show, :new, :create, :edit, :update]
   resources :documents, only: [:index,:show, :new, :create, :edit, :update]
   resources :connectors, only: [:index]
+  resources :credentials, only: [:index]
   resources :pages
 
 
