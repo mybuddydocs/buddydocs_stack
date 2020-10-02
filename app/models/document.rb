@@ -5,5 +5,5 @@ class Document < ApplicationRecord
   has_many :tags, through: :document_tags
   has_many :pages, dependent: :destroy
 
-  validates :name, :date, :url,:origin, presence: true
+  validates :name, :generated_date, :origin, presence: true
 end

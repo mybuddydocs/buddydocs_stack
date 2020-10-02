@@ -6,8 +6,7 @@ RSpec.describe Document, type: :model do
   subject {
     described_class.new(name: "test",
                         user: john,
-                        date: "Sept. 29, 2020",
-                        url: "www.test.fr",
+                        generated_date: "Sept. 29, 2020",
                         origin: "test")
 }
 
@@ -23,7 +22,7 @@ RSpec.describe Document, type: :model do
     expect(subject).not_to be_valid
   end
   it 'is invalid without a date' do
-    subject.date = nil
+    subject.generated_date = nil
     expect(subject).not_to be_valid
   end
   it 'is invalid without a url' do

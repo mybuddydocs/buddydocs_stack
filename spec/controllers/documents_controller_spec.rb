@@ -7,9 +7,9 @@ RSpec.describe DocumentsController, type: :controller do
     let(:laetitia) {create(:user)}
     let(:john) {create(:user)}
 
-    let(:valid_attributes) {{name: "test", user: laetitia, url: "www.test.fr", date: "Sept. 29, 2020", origin: "test"}}
-    let(:valid_attributes2) {{name: "test", user: laetitia, url: "www.test.fr", date: "Sept. 29, 2020", origin: "test"}}
-    let(:valid_attributes3) {{name: "test", user: john, url: "www.test.fr", date: "Sept. 29, 2020", origin: "test"}}
+    let(:valid_attributes) {{name: "test", user: laetitia, url: "www.test.fr", generated_date: "Sept. 29, 2020", origin: "test"}}
+    let(:valid_attributes2) {{name: "test", user: laetitia, url: "www.test.fr", generated_date: "Sept. 29, 2020", origin: "test"}}
+    let(:valid_attributes3) {{name: "test", user: john, url: "www.test.fr", generated_date: "Sept. 29, 2020", origin: "test"}}
     let(:valid_session) {{}}
     it 'it works' do
       Document.create! valid_attributes

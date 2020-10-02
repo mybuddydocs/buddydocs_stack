@@ -50,25 +50,25 @@ tag16 = Tag.create!(name: 'Dépenses en ligne', category: category4)
 puts "Some tags have been created"
 
 puts "Creating new documents..."
-document1 = Document.create!(name: "Carte d'identité", user: user1, reminder_date: Date.new(2020, 12, 12))
-document2 = Document.create!(name: "Passeport", user: user1, reminder_date: Date.new(2021, 1, 9))
-document3 = Document.create!(name: "RIB", user: user1, reminder_date: Date.new(2020, 10, 17))
-document4 = Document.create!(name: "Carte vitale", user: user1, reminder_date: Date.new(2025, 5, 10))
+document1 = Document.create!(name: "Carte d'identité", user: user1, reminder_date: Date.new(2020, 12, 12), generated_date: Date.new(2007, 10, 9), origin: 'Service public')
+document2 = Document.create!(name: "Passeport", user: user1, reminder_date: Date.new(2021, 1, 9), generated_date: Date.new(2007, 12, 12), origin: 'Service public')
+document3 = Document.create!(name: "RIB", user: user1, reminder_date: Date.new(2020, 10, 17), generated_date: Date.new(2010, 8, 1), origin: 'Service public')
+document4 = Document.create!(name: "Carte vitale", user: user1, reminder_date: Date.new(2025, 5, 10), generated_date: Date.new(2007, 5, 4), origin: 'Service public')
 
-document5 = Document.create!(name: "Contrat de travail", user: user1)
-document6 = Document.create!(name: "Acte de naissance", user: user1)
-document7 = Document.create!(name: "Diplôme de Master II", user: user1)
-document8 = Document.create!(name: "Carte grise", user: user1, reminder_date: Date.new(2021, 1, 10))
-document9 = Document.create!(name: "Assurance voiture", user: user1, reminder_date: Date.new(2020, 11, 8))
-document10 = Document.create!(name: "Permis de conduire", user: user1, reminder_date: Date.new(2050, 6, 10))
+document5 = Document.create!(name: "Contrat de travail", user: user1, generated_date: Date.new(2020, 12, 12), generated_date: Date.new(2018, 8, 28), origin: 'Le Wagon')
+document6 = Document.create!(name: "Acte de naissance", user: user1, generated_date: Date.new(2020, 12, 12), generated_date: Date.new(1985, 8, 9), origin: 'Service public')
+document7 = Document.create!(name: "Diplôme de Master II", user: user1, generated_date: Date.new(2020, 12, 12), generated_date: Date.new(2020, 9, 12), origin: 'Epitech')
+document8 = Document.create!(name: "Carte grise", user: user1, reminder_date: Date.new(2021, 1, 10), generated_date: Date.new(2020, 2, 12), origin: 'Service public')
+document9 = Document.create!(name: "Assurance voiture", user: user1, reminder_date: Date.new(2020, 11, 8), generated_date: Date.new(2017, 3, 15), origin: 'MAIF')
+document10 = Document.create!(name: "Permis de conduire", user: user1, reminder_date: Date.new(2050, 6, 10), generated_date: Date.new(2015, 4, 1), origin: 'Service public')
 
-document11 = Document.create!(name: "impots-02012020", user: user1)
-document12 = Document.create!(name: "impots-02022020", user: user1)
-document13 = Document.create!(name: "impots-02032020", user: user1)
+document11 = Document.create!(name: "impots-02012020", user: user1, generated_date: Date.new(2020, 1, 2), origin: 'Impots.gouv')
+document12 = Document.create!(name: "impots-02022020", user: user1, generated_date: Date.new(2020, 2, 2), origin: 'Impots.gouv')
+document13 = Document.create!(name: "impots-02032020", user: user1, generated_date: Date.new(2020, 3, 2), origin: 'Impots.gouv')
 
-document18 = Document.create!(name: "Facture CDiscount Janvier 2020", user: user1)
-document19 = Document.create!(name: "Facture CDiscount Février 2020", user: user1)
-document20 = Document.create!(name: "Facture EDF", user: user1)
+document18 = Document.create!(name: "Facture CDiscount Janvier 2020", user: user1, generated_date: Date.new(2020, 1, 12), origin: 'CDiscount')
+document19 = Document.create!(name: "Facture CDiscount Février 2020", user: user1, generated_date: Date.new(2020, 2, 12), origin: 'CDiscount')
+document20 = Document.create!(name: "Facture EDF", user: user1, generated_date: Date.new(2020, 2, 14), origin: 'Service public')
 puts "Some documents have been created"
 
 puts "Creating new document tags..."
