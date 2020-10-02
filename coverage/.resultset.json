@@ -863,10 +863,10 @@
           1,
           1,
           1,
-          10,
-          10,
+          0,
+          0,
           null,
-          11,
+          1,
           null,
           null
         ]
@@ -884,16 +884,16 @@
           null,
           1,
           1,
-          1,
-          1,
+          6,
+          6,
           null,
           1,
-          1,
-          1,
+          6,
+          6,
           null,
           null,
-          2,
-          2,
+          7,
+          7,
           null,
           null,
           1,
@@ -913,18 +913,18 @@
           1,
           1,
           1,
-          0,
-          0,
+          6,
+          6,
           null,
           1,
-          0,
-          0,
+          6,
+          6,
           null,
+          7,
+          7,
           1,
-          1,
-          1,
-          0,
-          0,
+          6,
+          6,
           null,
           null,
           null
@@ -1091,15 +1091,15 @@
           null,
           null,
           1,
-          2,
+          6,
           null,
           null,
           1,
-          2,
+          6,
           null,
           null,
           1,
-          2,
+          6,
           null,
           null,
           null
@@ -1129,58 +1129,20 @@
           null
         ]
       },
-      "/home/marceau/code/marceau21/buddydocs_stack/app/controllers/connectors_controller.rb": {
+      "/home/marceau/code/marceau21/buddydocs_stack/app/models/document.rb": {
         "lines": [
           1,
           1,
           1,
-          null,
-          null
-        ]
-      },
-      "/home/marceau/code/marceau21/buddydocs_stack/app/controllers/application_controller.rb": {
-        "lines": [
+          1,
           1,
           1,
           null,
           1,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/home/marceau/code/marceau21/buddydocs_stack/app/models/connector.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
           null
         ]
       }
     },
-    "timestamp": 1601652172
+    "timestamp": 1601652464
   }
 }

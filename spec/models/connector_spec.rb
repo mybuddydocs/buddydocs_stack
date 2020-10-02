@@ -2,10 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Connector, type: :model do
 
-  subject {
-    described_class.new(name: "test",
-                        url: "www.test.fr")
-}
+  subject {create(:connector)}
+
     it 'is valid with valid attributes' do
       expect(subject).to be_valid
     end
