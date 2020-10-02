@@ -870,16 +870,16 @@
           null,
           1,
           1,
-          0,
-          0,
+          3,
+          3,
           null,
           1,
-          0,
-          0,
+          3,
+          3,
           null,
           null,
-          1,
-          1,
+          4,
+          4,
           null,
           null,
           1,
@@ -1045,6 +1045,29 @@
           null
         ]
       },
+      "/home/marceau/code/marceau21/buddydocs_stack/spec/support/database_cleaner.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
       "/home/marceau/code/marceau21/buddydocs_stack/spec/support/controller_macros.rb": {
         "lines": [
           1,
@@ -1069,11 +1092,38 @@
           null
         ]
       },
-      "/home/marceau/code/marceau21/buddydocs_stack/app/controllers/connectors_controller.rb": {
+      "/home/marceau/code/marceau21/buddydocs_stack/app/controllers/documents_controller.rb": {
         "lines": [
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
           null,
           null
         ]
@@ -1107,20 +1157,20 @@
           null
         ]
       },
-      "/home/marceau/code/marceau21/buddydocs_stack/app/models/connector.rb": {
+      "/home/marceau/code/marceau21/buddydocs_stack/app/models/document.rb": {
         "lines": [
           1,
           1,
-          null,
+          1,
+          1,
+          1,
           1,
           null,
-          null,
-          null,
-          null,
+          1,
           null
         ]
       }
     },
-    "timestamp": 1601580947
+    "timestamp": 1601648517
   }
 }
