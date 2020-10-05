@@ -17,4 +17,7 @@ RSpec.describe Credential, type: :model do
     subject.password = nil
     expect(subject).not_to be_valid
   end
+  it 'should respond to launch_connector method' do
+    expect(subject).to respond_to(:launch_connector)
+  end
 end
