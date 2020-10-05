@@ -1169,19 +1169,6 @@
           null
         ]
       },
-      "/home/marceau/code/marceau21/buddydocs_stack/app/models/connector.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
       "/home/marceau/code/marceau21/buddydocs_stack/lib/spiders/spider_udemy.rb": {
         "lines": [
           1,
@@ -1271,8 +1258,21 @@
           null,
           null
         ]
+      },
+      "/home/marceau/code/marceau21/buddydocs_stack/app/models/connector.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1601914123
+    "timestamp": 1601931210
   }
 }

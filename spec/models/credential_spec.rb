@@ -3,6 +3,10 @@ require 'rails_helper'
 RSpec.describe Credential, type: :model do
   let(:john) {create(:user)}
   let(:connector) {create(:connector)}
+  let(:spider) {instance_double(Spiders::SpiderUdemy)}
+  before do
+    allow(Spiders::SpiderUdemy).to receive(:parse!).and_return(true)
+  end
 
   subject { create(:credential, user: john, connector: connector)}
 
@@ -20,8 +24,9 @@ RSpec.describe Credential, type: :model do
   it 'should respond to launch_connector method' do
     expect(subject).to respond_to :launch_connector
   end
-  # it ' should launch specific spider' do
-  #   connector.name = "udemy_connector"
-  #   expect(subject.launch_connector).to respond_to (:Spiders::SpiderUdemy.parse!).with(3).arguments
-  # end
+  it ' should launch specific spider depending of the connector name' do
+    connector.name = "udemy_connector"
+    subject.launch_connector
+    expect(Spiders::SpiderUdemy).to have_received(:parse!)
+  end
 end
