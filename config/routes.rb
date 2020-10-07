@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   resources :categories, only: [:index]
   resources :teams, only: [:new, :create, :edit, :update]
   resources :team_documents, only: [:index, :show, :new, :create, :edit, :update]
-  resources :documents, only: [:index,:show, :new, :create, :edit, :update]
+  resources :documents, only: [:index,:show, :new, :create, :edit, :update] do
+  end
   resources :pages
-
 
   namespace :admin do
     resources :users

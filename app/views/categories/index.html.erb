@@ -1,15 +1,15 @@
 <div class="flex">
   <div class="flex-auto text-gray-700 text-left bg-gradient-to-b from-hawkes-blue-500 to-indigo-100 px-4 py-2 m-2 rounded-lg w-7/12">
-      <%= render 'shared/searchbar'%>
+    <%= render 'shared/searchbar'%>
     <div class="flex justify-between items-center">
       <h1>Mes documents</h1>
       <%= link_to 'Ajouter des documents', new_document_path, class: "btn-primary hover:bg-indigo-800 text-white font-medium text-sm py-2 px-4 rounded-full" %>
     </div>
     <div class="w-full grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
       <% @categories.each do |category| %>
-        <%= link_to pages_path(category: category.name) do %>
-          <%= render 'shared/file_card', category: category %>
-        <% end %>
+      <%= link_to pages_path(category: category.name) do %>
+      <%= render 'shared/file_card', category: category %>
+      <% end %>
       <% end %>
     </div>
 
@@ -17,7 +17,7 @@
       <div class="flex-1 bg-white rounded-lg pb-3 shadow">
         <h1>Mes rappels <span class="bg-red-500 rounded-full p-2 ml-3 text-white">10</span></h1>
         <% @documents_with_reminder.first(3).each do |document| %>
-          <%= render 'shared/reminder_card', document: document %>
+        <%= render 'shared/reminder_card', document: document %>
         <% end %>
       </div>
       <div class="flex-1">
@@ -30,3 +30,73 @@
 </div>
 
 
+<button class="modal-open btn-primary hover:bg-indigo-800 text-white font-medium text-sm py-2 px-4 rounded-full focus:outline-none">Ajouter un document</button>
+
+<!--Modal-->
+<div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+  <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+  <div class="modal-container bg-white rounded-lg w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto h-full sm:h-1/2">
+
+    <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+      </svg>
+      <span class="text-sm">(Esc)</span>
+    </div>
+
+    <!-- Add margin if you want to see some of the overlay behind the modal-->
+    <div class="modal-content   text-left">
+      <%= image_tag  "document_add/img_doc_add.png" %>
+      <!--Title-->
+      <div class="flex justify-center items-center pb-3">
+        <p class="text-2xl font-bold">Ajouter un document</p>
+      </div>
+    </div>
+
+    <!--Body-->
+    <div class="flex flex-col justify-center items-center pb-3">
+      <%= render 'documents/new' %>
+    </div>
+  </div>
+</div>
+
+<script>
+  var openmodal = document.querySelectorAll('.modal-open')
+  for (var i = 0; i < openmodal.length; i++) {
+    openmodal[i].addEventListener('click', function(event) {
+      event.preventDefault()
+      toggleModal()
+    })
+  }
+
+  const overlay = document.querySelector('.modal-overlay')
+  overlay.addEventListener('click', toggleModal)
+
+  var closemodal = document.querySelectorAll('.modal-close')
+  for (var i = 0; i < closemodal.length; i++) {
+    closemodal[i].addEventListener('click', toggleModal)
+  }
+
+  document.onkeydown = function(evt) {
+    evt = evt || window.event
+    var isEscape = false
+    if ("key" in evt) {
+      isEscape = (evt.key === "Escape" || evt.key === "Esc")
+    } else {
+      isEscape = (evt.keyCode === 27)
+    }
+    if (isEscape && document.body.classList.contains('modal-active')) {
+      toggleModal()
+    }
+  };
+
+
+  function toggleModal() {
+    const body = document.querySelector('body')
+    const modal = document.querySelector('.modal')
+    modal.classList.toggle('opacity-0')
+    modal.classList.toggle('pointer-events-none')
+    body.classList.toggle('modal-active')
+  }
+</script>

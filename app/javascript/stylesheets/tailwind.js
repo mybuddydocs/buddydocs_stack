@@ -309,6 +309,7 @@ module.exports = {
             '40v': '40vh',
             '60v': '60vh',
             ...theme('spacing'),
+            '1/2': '50%',
             full: '100%',
             screen: '100vh',
         }),
