@@ -7,12 +7,33 @@ class DocumentsController < ApplicationController
   end
 
   def new
-    @document = Document.new
   end
 
   def create
+    # ici enregistre a la fois page new et aussi document_tag egalement
+    # et ocr ...
     @document = Document.new(document_params)
+    @document.user = current_user
+    @document.url = "pc"
+    @document.origin="pc"
 
+    @document_tag = DocumentTag.new(document_params[:document_tags_attributes])
+    @document.date = 'date'
+    @page = Page.new(document_params[:pages_attributes])
+    if @document.save!
+      redirect_to categories_path
+    else
+      render 'new'
+    end
+
+    @page.content =' test'
+    @page.page_number = 1
+    @page.document = @document
+    @page.photo.attach(params["document"]["page"]["photo"])
+    @page.save!
+    @document_tag.document = @document
+    @document_tag.tag = Tag.find(params["document"]["document_tag"]["tag"])
+    @document_tag.save!
   end
 
   def edit
@@ -26,7 +47,6 @@ class DocumentsController < ApplicationController
 
   private
   def document_params
-
+    params.require(:document).permit(:name, pages_attributes: [:photo], document_tags_attributes: [:tag])
   end
-
 end
