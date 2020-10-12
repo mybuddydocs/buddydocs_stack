@@ -12,6 +12,13 @@ class DocumentsController < ApplicationController
   def create
     # ici enregistre a la fois page new et aussi document_tag egalement
     # et ocr ...
+    # pb a regler: les messages d'erreur,
+                  # afficher la photo a upload ,
+                  # les couleurs... ,
+                  # arriver sur categories index,
+                  # relancer la machine etc...
+                  # flex space around
+                  #  refiler caméra
     @document = Document.new(document_params)
     @document.user = current_user
     @document.url = "pc"
@@ -26,11 +33,21 @@ class DocumentsController < ApplicationController
       render 'new'
     end
 
-    @page.content =' test'
+    @page.content ='en cours de traitement'
     @page.page_number = 1
     @page.document = @document
     @page.photo.attach(params["document"]["page"]["photo"])
     @page.save!
+    # Utilisation de l'ocr de Cloudinary pour l'ocr
+    # Il doit avoir une configuration de l'uplaod ( avec un initialiser ) pour pouvoir des l'upload utiliser l'ocr et pas avoir comme ici à update
+    # sleep(3)
+    # photoUploaded = Cloudinary::Search.expression("public_id:#{@page.photo.key}").execute
+    # result =  Cloudinary::Api.update("#{@page.photo.key}", :ocr => "adv_ocr")
+    # @page.content = result
+    # @page.save!
+
+    # Utilisition de Google
+
     @document_tag.document = @document
     @document_tag.tag = Tag.find(params["document"]["document_tag"]["tag"])
     @document_tag.save!

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :documents, only: [:index,:show, :new, :create, :edit, :update]
   resources :connectors, only: [:index]
-  resources :credentials, only: [:index]
+  resources :credentials, only: [:new, :create, :index]
   resources :pages
 
   namespace :admin do
