@@ -857,7 +857,42 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/factories/devise.rb": {
+=======
+      "/home/marceau/code/marceau21/buddydocs_stack/spec/factories/connector.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          5,
+          5,
+          null,
+          6,
+          null,
+          null
+        ]
+      },
+      "/home/marceau/code/marceau21/buddydocs_stack/spec/factories/credential.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          5,
+          5,
+          null,
+          1,
+          5,
+          5,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/marceau/code/marceau21/buddydocs_stack/spec/factories/devise.rb": {
+>>>>>>> 9e41eca8acc8e11c90b59e31dc4789fb843cc719
         "lines": [
           1,
           null,
@@ -870,16 +905,16 @@
           null,
           1,
           1,
-          0,
-          0,
+          5,
+          5,
           null,
           1,
-          0,
-          0,
+          5,
+          5,
           null,
           null,
-          1,
-          1,
+          6,
+          6,
           null,
           null,
           1,
@@ -893,12 +928,36 @@
           null
         ]
       },
+      "/home/marceau/code/marceau21/buddydocs_stack/spec/factories/document.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          1,
+          0,
+          0,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/config/routes.rb": {
         "lines": [
           1,
           null,
           1,
           null,
+          1,
           1,
           1,
           1,
@@ -1021,7 +1080,17 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/app/helpers/documents_helper.rb": {
+=======
+      "/home/marceau/code/marceau21/buddydocs_stack/app/helpers/credentials_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/marceau/code/marceau21/buddydocs_stack/app/helpers/documents_helper.rb": {
+>>>>>>> 9e41eca8acc8e11c90b59e31dc4789fb843cc719
         "lines": [
           1,
           null
@@ -1045,7 +1114,34 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/support/controller_macros.rb": {
+=======
+      "/home/marceau/code/marceau21/buddydocs_stack/spec/support/database_cleaner.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          5,
+          null,
+          null,
+          1,
+          5,
+          null,
+          null,
+          1,
+          5,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/marceau/code/marceau21/buddydocs_stack/spec/support/controller_macros.rb": {
+>>>>>>> 9e41eca8acc8e11c90b59e31dc4789fb843cc719
         "lines": [
           1,
           1,
@@ -1069,12 +1165,121 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/app/models/document.rb": {
+=======
+      "/home/marceau/code/marceau21/buddydocs_stack/app/models/credential.rb": {
+>>>>>>> 9e41eca8acc8e11c90b59e31dc4789fb843cc719
         "lines": [
           1,
           1,
           1,
           1,
+<<<<<<< HEAD
+=======
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/marceau/code/marceau21/buddydocs_stack/lib/spiders/spider_udemy.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/marceau/code/marceau21/buddydocs_stack/app/models/connector.rb": {
+        "lines": [
+>>>>>>> 9e41eca8acc8e11c90b59e31dc4789fb843cc719
           1,
           1,
           null,
@@ -1083,6 +1288,10 @@
         ]
       }
     },
+<<<<<<< HEAD
     "timestamp": 1602239246
+=======
+    "timestamp": 1601931210
+>>>>>>> 9e41eca8acc8e11c90b59e31dc4789fb843cc719
   }
 }

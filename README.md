@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/mybuddydocs/buddydocs_stack.svg?token=g9ykjDG4gKqnsxgvA8om&branch=master)](https://travis-ci.com/mybuddydocs/buddydocs_stack)
+[![Build Status](https://travis-ci.org/mybuddydocs/buddydocs_stack.svg?branch=master)](https://travis-ci.org/mybuddydocs/buddydocs_stack)
 
 # README
 

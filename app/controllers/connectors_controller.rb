@@ -1,5 +1,7 @@
 class ConnectorsController < ApplicationController
   def index
-    @connectors = Connector.where(available: true)
+    @connectors = Connector.all
+
+    # je fais un test
   end
 end
