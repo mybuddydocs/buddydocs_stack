@@ -1,6 +1,9 @@
 module.exports = {
     future: {},
-    purge: [],
+    purge: {
+      layers: ['base','components', 'utilities'],
+      content: ['./src/**/*.html'],
+    },
     target: 'relaxed',
     prefix: '',
     important: false,

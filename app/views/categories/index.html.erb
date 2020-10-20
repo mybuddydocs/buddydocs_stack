@@ -5,7 +5,7 @@
       <h1>Mes documents</h1>
       <%= link_to 'Ajouter des documents', new_document_path, class: "btn-primary hover:bg-indigo-800 text-white font-medium text-sm py-2 px-4 rounded-full" %>
     </div>
-    <div class="w-full grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+    <div class="w-full grid sm:grid-cols-2 lg:grid-cols-4">
       <% @categories.each do |category| %>
       <%= link_to pages_path(category: category.name) do %>
       <%= render 'shared/file_card', category: category %>

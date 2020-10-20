@@ -187,6 +187,19 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
+    elasticsearch (7.9.0)
+      elasticsearch-api (= 7.9.0)
+      elasticsearch-transport (= 7.9.0)
+    elasticsearch-api (7.9.0)
+      multi_json
+    elasticsearch-model (7.1.1)
+      activesupport (> 3)
+      elasticsearch (> 1)
+      hashie
+    elasticsearch-rails (7.1.1)
+    elasticsearch-transport (7.9.0)
+      faraday (~> 1)
+      multi_json
     erubi (1.9.0)
     execjs (2.7.0)
     factory_bot (6.1.0)
@@ -490,6 +503,8 @@ DEPENDENCIES
   devise-bootstrapped!
   devise_masquerade (~> 1.2)
   dotenv-rails
+  elasticsearch-model
+  elasticsearch-rails
   factory_bot_rails
   faker!
   font-awesome-sass (~> 5.13)
