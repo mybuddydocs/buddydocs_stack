@@ -5,7 +5,7 @@ FactoryBot.define do
       Faker::Config.random = Random.new(n)
       Faker::Book.title
     end
-    sequence(:date) do |n|
+    sequence(:generated_date) do |n|
       Faker::Config.random = Random.new(n)
       Faker::Date.between(from: 2.days.ago, to: Date.today)
     end
