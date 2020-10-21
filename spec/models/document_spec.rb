@@ -27,7 +27,7 @@ RSpec.describe Document, type: :model do
   end
   it 'is invalid without a url' do
     subject.url = nil
-    expect(subject).not_to be_valid
+    expect(subject).to be_valid
   end
   it 'is invalid without a origin' do
     subject.origin = nil

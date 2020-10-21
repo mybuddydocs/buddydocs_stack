@@ -857,42 +857,38 @@
           null
         ]
       },
-<<<<<<< HEAD
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/factories/connector.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          9,
+          9,
+          null,
+          10,
+          null,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/factories/credential.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          10,
+          10,
+          null,
+          1,
+          10,
+          10,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/factories/devise.rb": {
-=======
-      "/home/marceau/code/marceau21/buddydocs_stack/spec/factories/connector.rb": {
-        "lines": [
-          null,
-          1,
-          1,
-          1,
-          5,
-          5,
-          null,
-          6,
-          null,
-          null
-        ]
-      },
-      "/home/marceau/code/marceau21/buddydocs_stack/spec/factories/credential.rb": {
-        "lines": [
-          null,
-          1,
-          1,
-          1,
-          5,
-          5,
-          null,
-          1,
-          5,
-          5,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/marceau/code/marceau21/buddydocs_stack/spec/factories/devise.rb": {
->>>>>>> 9e41eca8acc8e11c90b59e31dc4789fb843cc719
         "lines": [
           1,
           null,
@@ -905,16 +901,16 @@
           null,
           1,
           1,
-          5,
-          5,
+          15,
+          15,
           null,
           1,
-          5,
-          5,
+          15,
+          15,
           null,
           null,
-          6,
-          6,
+          16,
+          16,
           null,
           null,
           1,
@@ -928,18 +924,18 @@
           null
         ]
       },
-      "/home/marceau/code/marceau21/buddydocs_stack/spec/factories/document.rb": {
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/factories/document.rb": {
         "lines": [
           1,
           1,
           1,
           1,
-          0,
-          0,
+          1,
+          1,
           null,
           1,
-          0,
-          0,
+          1,
+          1,
           null,
           1,
           1,
@@ -960,11 +956,11 @@
           1,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
           null,
+          1,
+          1,
+          1,
+          1,
           null,
           1,
           1,
@@ -1080,17 +1076,13 @@
           null
         ]
       },
-<<<<<<< HEAD
-      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/app/helpers/documents_helper.rb": {
-=======
-      "/home/marceau/code/marceau21/buddydocs_stack/app/helpers/credentials_helper.rb": {
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/app/helpers/credentials_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/marceau/code/marceau21/buddydocs_stack/app/helpers/documents_helper.rb": {
->>>>>>> 9e41eca8acc8e11c90b59e31dc4789fb843cc719
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/app/helpers/documents_helper.rb": {
         "lines": [
           1,
           null
@@ -1114,34 +1106,30 @@
           null
         ]
       },
-<<<<<<< HEAD
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/support/database_cleaner.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          19,
+          null,
+          null,
+          1,
+          19,
+          null,
+          null,
+          1,
+          19,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/support/controller_macros.rb": {
-=======
-      "/home/marceau/code/marceau21/buddydocs_stack/spec/support/database_cleaner.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          5,
-          null,
-          null,
-          1,
-          5,
-          null,
-          null,
-          1,
-          5,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/marceau/code/marceau21/buddydocs_stack/spec/support/controller_macros.rb": {
->>>>>>> 9e41eca8acc8e11c90b59e31dc4789fb843cc719
         "lines": [
           1,
           1,
@@ -1165,133 +1153,450 @@
           null
         ]
       },
-<<<<<<< HEAD
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/app/controllers/connectors_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/controllers/credentials_controller_spec.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          3,
+          2,
+          2,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          5,
+          5,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/app/controllers/credentials_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/controllers/documents_controller_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/app/controllers/documents_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/helpers/credentials_helper_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/models/connector_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          4,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/app/models/connector.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/models/credential_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          6,
+          6,
+          1,
+          1,
+          5,
+          null,
+          null,
+          6,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/app/models/credential.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/models/document_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          7,
+          null,
+          1,
+          6,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/app/models/document.rb": {
-=======
-      "/home/marceau/code/marceau21/buddydocs_stack/app/models/credential.rb": {
->>>>>>> 9e41eca8acc8e11c90b59e31dc4789fb843cc719
         "lines": [
           1,
           1,
           1,
           1,
-<<<<<<< HEAD
-=======
-          null,
           1,
           1,
           1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/requests/credentials_spec.rb": {
+        "lines": [
+          1,
           null,
-          null,
+          1,
           null,
           null
         ]
       },
-      "/home/marceau/code/marceau21/buddydocs_stack/lib/spiders/spider_udemy.rb": {
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/views/categories/index.html.erb_spec.rb": {
         "lines": [
           1,
-          1,
-          1,
-          1,
           null,
           1,
           1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
           null
         ]
       },
-      "/home/marceau/code/marceau21/buddydocs_stack/app/models/connector.rb": {
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/spec/views/connectors/index.html.erb_spec.rb": {
         "lines": [
->>>>>>> 9e41eca8acc8e11c90b59e31dc4789fb843cc719
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/melissaaugier/code/melissaaugier/buddydocs_stack/lib/spiders/spider_udemy.rb": {
+        "lines": [
+          1,
+          1,
           1,
           1,
           null,
           1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
           null
         ]
       }
     },
-<<<<<<< HEAD
-    "timestamp": 1602239246
-=======
-    "timestamp": 1601931210
->>>>>>> 9e41eca8acc8e11c90b59e31dc4789fb843cc719
+    "timestamp": 1603277154
   }
 }

@@ -18,7 +18,7 @@ class DocumentsController < ApplicationController
     @document.origin="pc"
 
     @document_tag = DocumentTag.new(document_params[:document_tags_attributes])
-    @document.date = 'date'
+    @document.generated_date = Date.today
     @page = Page.new(document_params[:pages_attributes])
     if @document.save!
       redirect_to categories_path
@@ -47,6 +47,6 @@ class DocumentsController < ApplicationController
 
   private
   def document_params
-    params.require(:document).permit(:name, pages_attributes: [:photo], document_tags_attributes: [:tag])
+    params.require(:document).permit(:name, :url, :generated_date, :origin, pages_attributes: [:photo], document_tags_attributes: [:tag] )
   end
 end
