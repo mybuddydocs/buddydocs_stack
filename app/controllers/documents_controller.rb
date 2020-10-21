@@ -12,28 +12,38 @@ class DocumentsController < ApplicationController
   def create
     # ici enregistre a la fois page new et aussi document_tag egalement
     # et ocr ...
+    # pb a regler: les messages d'erreur,
+                  # afficher la photo a upload ,
+                  # les couleurs... ,
+                  # arriver sur categories index,
+                  # relancer la machine etc...
+                  # flex space around
+                  #  refiler caméra
+                  #  date du doc, ocr ou uplaod?
     @document = Document.new(document_params)
     @document.user = current_user
     @document.url = "pc"
     @document.origin="pc"
+    @document.generated_date = Date.today
 
     @document_tag = DocumentTag.new(document_params[:document_tags_attributes])
-    @document.generated_date = Date.today
+
     @page = Page.new(document_params[:pages_attributes])
+    @page.content ='en cours de traitement'
+    @page.page_number = 1
+    @page.document = @document
+    @page.photo.attach(params["document"]["page"]["photo"])
+    @page.save!
+    #  l'ocr est fait par google dans l'after commit de page
+    @document_tag.document = @document
+    @document_tag.tag = Tag.find(params["document"]["document_tag"]["tag"])
+    @document_tag.save!
     if @document.save!
       redirect_to categories_path
     else
       render 'new'
     end
 
-    @page.content =' test'
-    @page.page_number = 1
-    @page.document = @document
-    @page.photo.attach(params["document"]["page"]["photo"])
-    @page.save!
-    @document_tag.document = @document
-    @document_tag.tag = Tag.find(params["document"]["document_tag"]["tag"])
-    @document_tag.save!
   end
 
   def edit
