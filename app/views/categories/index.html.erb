@@ -1,8 +1,8 @@
-<div class="flex">
-  <div class="flex-auto text-gray-700 text-left bg-gradient-to-b from-hawkes-blue-500 to-indigo-100 px-4 py-2 m-2 rounded-lg w-7/12">
-    <%= render 'shared/searchbar'%>
-    <div class="flex justify-between items-center">
-      <h1>Mes documents</h1>
+<div class="flex mb-3">
+  <div class="flex-auto w-9/12 text-gray-700 text-left bg-gradient-to-b from-hawkes-blue-500 to-indigo-100 px-4 py-2 m-2 rounded-lg w-7/12">
+      <%= render 'shared/searchbar' %>
+    <div class="flex justify-between items-center mt-8 ">
+      <h1 class="ml-3">Mes documents</h1>
       <%= link_to 'Ajouter des documents', new_document_path, class: "btn-primary hover:bg-indigo-800 text-white font-medium text-sm py-2 px-4 rounded-full" %>
     </div>
     <div class="w-full grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
@@ -13,20 +13,35 @@
       <% end %>
     </div>
 
-    <div class="flex my-2">
-      <div class="flex-1 bg-white rounded-lg pb-3 shadow">
-        <h1>Mes rappels <span class="bg-red-500 rounded-full p-2 ml-3 text-white">10</span></h1>
-        <% @documents_with_reminder.first(3).each do |document| %>
-        <%= render 'shared/reminder_card', document: document %>
+    <div class="flex my-2 w-100">
+      <div class="bg-white rounded-lg p-2">
+        <h3 class="m-5">Mes rappels <span class="bg-red-500 rounded-full p-2 m-0 ml-3 text-white">10</span></h3>
+        <% @documents_with_reminder.first(5).each do |document| %>
+          <%= render 'shared/reminder_card', document: document %>
         <% end %>
       </div>
-      <div class="flex-1">
+      <div>
+        <h2 class="m-6">Mes démarches</h2>
+      </div>
+      <div>
 
       </div>
+
     </div>
 
   </div>
-  <div class="flex-auto text-gray-700 text-center bg-gradient-to-t from-indigo-100 to-white px-4 py-2 m-2 rounded-lg">2</div>
+  <div class="flex-auto w-3/12 text-gray-700 bg-gradient-to-t from-indigo-100  via-white to-white p-2 py-2 m-2 rounded-lg relative">
+    <div>
+      <%= render 'shared/missing_docs_card', document: Document.all %>
+    </div>
+    <div class="p-2 mb-5 text-center absolute inset-x-0 bottom-0">
+      <%= image_tag "amico.png", alt: "icon-upgrade", class: 'm-auto mt-4 w-40' %>
+      <h4>Changer votre abonnement</h4>
+      <p class="mb-5">Qu’est ce qui est utile et qui s’étend ? Votre espace de stockage, bien sûr ! Votre paperasse n’aura jamais eu aussi fière allure.</p>
+      <%= link_to "Mettre à jour mon abonnement", root_path, class: 'text-sm font-semibold bg-indigo-500 text-white rounded-full m-auto p-3 px-4 text-white hover:bg-indigo-500 hover:text-white'  %>
+    </div>
+
+  </div>
 </div>
 
 

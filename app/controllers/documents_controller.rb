@@ -24,9 +24,10 @@ class DocumentsController < ApplicationController
     @document.user = current_user
     @document.url = "pc"
     @document.origin="pc"
-    @document.date = 'date'
+    @document.generated_date = Date.today
 
     @document_tag = DocumentTag.new(document_params[:document_tags_attributes])
+
     @page = Page.new(document_params[:pages_attributes])
     @page.content ='en cours de traitement'
     @page.page_number = 1
@@ -56,6 +57,6 @@ class DocumentsController < ApplicationController
 
   private
   def document_params
-    params.require(:document).permit(:name, pages_attributes: [:photo], document_tags_attributes: [:tag])
+    params.require(:document).permit(:name, :url, :generated_date, :origin, pages_attributes: [:photo], document_tags_attributes: [:tag] )
   end
 end
