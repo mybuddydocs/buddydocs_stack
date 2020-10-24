@@ -19,38 +19,31 @@ class DocumentsController < ApplicationController
                   # relancer la machine etc...
                   # flex space around
                   #  refiler caméra
+                  #  date du doc, ocr ou uplaod?
     @document = Document.new(document_params)
     @document.user = current_user
     @document.url = "pc"
     @document.origin="pc"
+    @document.generated_date = Date.today
 
     @document_tag = DocumentTag.new(document_params[:document_tags_attributes])
-    @document.date = 'date'
+
     @page = Page.new(document_params[:pages_attributes])
+    @page.content ='en cours de traitement'
+    @page.page_number = 1
+    @page.document = @document
+    @page.photo.attach(params["document"]["page"]["photo"])
+    @page.save!
+    #  l'ocr est fait par google dans l'after commit de page
+    @document_tag.document = @document
+    @document_tag.tag = Tag.find(params["document"]["document_tag"]["tag"])
+    @document_tag.save!
     if @document.save!
       redirect_to categories_path
     else
       render 'new'
     end
 
-    @page.content ='en cours de traitement'
-    @page.page_number = 1
-    @page.document = @document
-    @page.photo.attach(params["document"]["page"]["photo"])
-    @page.save!
-    # Utilisation de l'ocr de Cloudinary pour l'ocr
-    # Il doit avoir une configuration de l'uplaod ( avec un initialiser ) pour pouvoir des l'upload utiliser l'ocr et pas avoir comme ici à update
-    # sleep(3)
-    # photoUploaded = Cloudinary::Search.expression("public_id:#{@page.photo.key}").execute
-    # result =  Cloudinary::Api.update("#{@page.photo.key}", :ocr => "adv_ocr")
-    # @page.content = result
-    # @page.save!
-
-    # Utilisition de Google
-
-    @document_tag.document = @document
-    @document_tag.tag = Tag.find(params["document"]["document_tag"]["tag"])
-    @document_tag.save!
   end
 
   def edit
@@ -64,6 +57,6 @@ class DocumentsController < ApplicationController
 
   private
   def document_params
-    params.require(:document).permit(:name, pages_attributes: [:photo], document_tags_attributes: [:tag])
+    params.require(:document).permit(:name, :url, :generated_date, :origin, pages_attributes: [:photo], document_tags_attributes: [:tag] )
   end
 end

@@ -36,6 +36,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
+
   gem 'simplecov', require: false, group: :test
   gem 'rails-controller-testing'
 
@@ -83,6 +84,7 @@ gem 'omniauth-github', '~> 1.4'
 gem 'omniauth-twitter', '~> 1.4'
 gem 'redis', '~> 4.2', '>= 4.2.2'
 gem 'sidekiq', '~> 6.0', '>= 6.0.3'
+gem 'sidekiq-failures', '~> 1.0'
 gem 'sitemap_generator', '~> 6.1', '>= 6.1.2'
 gem 'whenever', require: false
 gem 'simple_form'
