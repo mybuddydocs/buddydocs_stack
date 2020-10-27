@@ -1,4 +1,15 @@
 GIT
+  remote: git://github.com/elastic/elasticsearch-rails.git
+  revision: 16a297a56e3d1845cc306c1541794280d4b2fdcc
+  branch: master
+  specs:
+    elasticsearch-model (7.1.0)
+      activesupport (> 3)
+      elasticsearch (> 1)
+      hashie
+    elasticsearch-rails (7.1.0)
+
+GIT
   remote: https://github.com/excid3/administrate.git
   revision: 239ec5bb8c064ca28b010cc5497882493dd4494f
   branch: jumpstart
@@ -199,11 +210,6 @@ GEM
     elasticsearch-extensions (0.0.31)
       ansi
       elasticsearch
-    elasticsearch-model (7.1.1)
-      activesupport (> 3)
-      elasticsearch (> 1)
-      hashie
-    elasticsearch-rails (7.1.1)
     elasticsearch-transport (7.9.0)
       faraday (~> 1)
       multi_json
@@ -568,8 +574,8 @@ DEPENDENCIES
   devise_masquerade (~> 1.2)
   dotenv-rails
   elasticsearch-extensions
-  elasticsearch-model
-  elasticsearch-rails
+  elasticsearch-model!
+  elasticsearch-rails!
   factory_bot_rails
   faker!
   font-awesome-sass (~> 5.13)

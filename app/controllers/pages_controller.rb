@@ -1,6 +1,12 @@
 class PagesController < ApplicationController
   def index
-    @pages = Page.all
+    query = params[:search_pages].presence && params[:search_pages][:query]
+    user_docs = Page.joins(:document).where(documents: { user: current_user})
+    if query && query != ""
+      @pages = user_docs.search(query)
+    else
+      @pages = user_docs
+    end
   end
 
   def show

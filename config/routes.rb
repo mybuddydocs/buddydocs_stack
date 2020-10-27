@@ -9,7 +9,12 @@ Rails.application.routes.draw do
   resources :documents, only: [:index,:show, :new, :create, :edit, :update]
   resources :connectors, only: [:index]
   resources :credentials, only: [:new, :create, :index]
-  resources :pages
+
+  resources :pages do
+    collection do
+      get :search
+    end
+  end
 
   namespace :admin do
     resources :users
@@ -31,7 +36,7 @@ Rails.application.routes.draw do
         sessions: 'users/sessions'
       }
 
-  get 'search', to: 'search#search'
+
 
   root to: 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
