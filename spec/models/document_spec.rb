@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Document, type: :model do
+RSpec.describe Document, type: :model, elasticsearch: true do
   let(:john) {create(:user)}
 
   subject { create(:document, user: john)}
@@ -16,8 +16,8 @@ RSpec.describe Document, type: :model do
     subject.user = nil
     expect(subject).not_to be_valid
   end
-  it 'is invalid without a date' do
-    subject.date = nil
+  it 'is invalid without a generated date' do
+    subject.generated_date = nil
     expect(subject).not_to be_valid
   end
   it 'is invalid without a url' do

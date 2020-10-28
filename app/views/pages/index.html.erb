@@ -1,17 +1,17 @@
 <h1>Pages#index</h1>
 
-<%= form_for :search_pages, url: pages_path, method: :get, html: {class: 'w-full flex justify-between border border-solid p-1 rounded-full'} do |form| %>
-  <%= form.text_field :query, value: params[:search_pages].presence && params[:search_pages][:query], class: 'appearance-none bg-transparent border-none w-full ml-3 py-1 px-2 leading-tight focus:outline-none' %>
-  <%= form.submit 'Search', class: 'bg-indigo-500 hover:bg-indigo-600 rounded-full p-3 text-white' %>
+<%= form_for pages_path, method: :get, html: {class: 'w-full flex justify-between border border-solid p-1 rounded-full'} do |f| %>
+  <%= text_field_tag :query, params[:query], class: 'appearance-none bg-transparent border-none w-full ml-3 py-1 px-2 leading-tight focus:outline-none' %>
+  <%= submit_tag "Search", class: 'bg-indigo-500 hover:bg-indigo-600 rounded-full p-3 text-white' %>
 <% end %>
 
-<p>Find me in app/views/pages/index.html.erb</p>
 
 <div class="grid grid-cols-3 grid-flow-row gap-4">
   <% @pages.each do |page| %>
     <div class="overflow-scroll h-64">
+      <%=  %>
       <h3><%= page.document.name %></h3>
-      <%= cl_image_tag Page.find(page.id.to_i).photo.key, alt: "alttext" %>
+      <%= cl_image_tag page.photo.key, alt: "alttext" %>
       <p><%= page.content %></p>
     </div>
   <% end %>

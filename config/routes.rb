@@ -2,6 +2,7 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
 
+  get 'search/index'
   resources :categories, only: [:index]
   resources :teams, only: [:new, :create, :edit, :update]
   resources :team_documents, only: [:index, :show, :new, :create, :edit, :update]
@@ -13,6 +14,12 @@ Rails.application.routes.draw do
   resources :pages do
     collection do
       get :search
+    end
+  end
+
+  resources :search, only: [] do
+    collection do
+      get :index
     end
   end
 
