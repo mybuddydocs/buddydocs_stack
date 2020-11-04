@@ -25,14 +25,14 @@ RSpec.describe CredentialsController, type: :controller do
       end
     end
   end
-  describe 'GET #new' do 
-    let(:laetitia) {create(:user)}
-    it 'should get new' do
-      sign_in laetitia
-      get :new
+  # describe 'GET #new' do 
+  #   let(:laetitia) {create(:user)}
+  #   it 'should get new' do
+  #     sign_in laetitia
+  #     get :new
 
-      expect(response).to have_http_status(200)
-      expect(response).to render_template("new")
-    end
-  end
+  #     expect(response).to have_http_status(200)
+  #     expect(response).to render_template("new")
+  #   end
+  # end
 end
