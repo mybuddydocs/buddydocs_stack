@@ -51,25 +51,25 @@ tag16 = Tag.create!(name: 'Dépenses en ligne', category: category4)
 puts "Some tags have been created"
 
 puts "Creating new documents..."
-document1 = Document.create!(name: "Carte d'identité", user: user1, reminder_date: Date.new(2020, 12, 12), date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
-document2 = Document.create!(name: "Passeport", user: user1, reminder_date: Date.new(2021, 1, 9), date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
-document3 = Document.create!(name: "RIB", user: user1, reminder_date: Date.new(2020, 10, 17), date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
-document4 = Document.create!(name: "Carte vitale", user: user1, reminder_date: Date.new(2025, 5, 10), date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
+document1 = Document.create!(name: "Carte d'identité", user: user1, reminder_date: Date.new(2020, 12, 12), generated_date: Date.new(2020,10,6), url: "www.test.com", origin: "Marceau")
+document2 = Document.create!(name: "Passeport", user: user1, reminder_date: Date.new(2021, 1, 9), generated_date: Date.new(2020,10,6), url: "www.test.com", origin: "Marceau")
+document3 = Document.create!(name: "RIB", user: user1, reminder_date: Date.new(2020, 10, 17), generated_date: Date.new(2020,10,6), url: "www.test.com", origin: "Marceau")
+document4 = Document.create!(name: "Carte vitale", user: user1, reminder_date: Date.new(2025, 5, 10), generated_date: Date.new(2020,10,6), url: "www.test.com", origin: "Marceau")
 
-document5 = Document.create!(name: "Contrat de travail", user: user1, date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
-document6 = Document.create!(name: "Acte de naissance", user: user1, date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
-document7 = Document.create!(name: "Diplôme de Master II", user: user1, date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
-document8 = Document.create!(name: "Carte grise", user: user1, reminder_date: Date.new(2021, 1, 10), date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
-document9 = Document.create!(name: "Assurance voiture", user: user1, reminder_date: Date.new(2020, 11, 8), date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
-document10 = Document.create!(name: "Permis de conduire", user: user1, reminder_date: Date.new(2050, 6, 10), date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
+document5 = Document.create!(name: "Contrat de travail", user: user1, generated_date: Date.new(2020,10,6), url: "www.test.com", origin: "Marceau")
+document6 = Document.create!(name: "Acte de naissance", user: user1, generated_date: Date.new(2020,10,6), url: "www.test.com", origin: "Marceau")
+document7 = Document.create!(name: "Diplôme de Master II", user: user1, generated_date: Date.new(2020,10,6), url: "www.test.com", origin: "Marceau")
+document8 = Document.create!(name: "Carte grise", user: user1, reminder_date: Date.new(2021, 1, 10), generated_date: Date.new(2020,10,6), url: "www.test.com", origin: "Marceau")
+document9 = Document.create!(name: "Assurance voiture", user: user1, reminder_date: Date.new(2020, 11, 8), generated_date: Date.new(2020,10,6), url: "www.test.com", origin: "Marceau")
+document10 = Document.create!(name: "Permis de conduire", user: user1, reminder_date: Date.new(2050, 6, 10), generated_date: Date.new(2020,10,6), url: "www.test.com", origin: "Marceau")
 
-document11 = Document.create!(name: "impots-02012020", user: user1, date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
-document12 = Document.create!(name: "impots-02022020", user: user1, date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
-document13 = Document.create!(name: "impots-02032020", user: user1, date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
+document11 = Document.create!(name: "impots-02012020", user: user1, generated_date: Date.new(2020,10,6), url: "www.test.com", origin: "Marceau")
+document12 = Document.create!(name: "impots-02022020", user: user1, generated_date: Date.new(2020,10,6), url: "www.test.com", origin: "Marceau")
+document13 = Document.create!(name: "impots-02032020", user: user1, generated_date: Date.new(2020,10,6), url: "www.test.com", origin: "Marceau")
 
-document18 = Document.create!(name: "Facture CDiscount Janvier 2020", user: user1, date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
-document19 = Document.create!(name: "Facture CDiscount Février 2020", user: user1, date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
-document20 = Document.create!(name: "Facture EDF", user: user1, date: "October 6, 2020", url: "www.test.com", origin: "Marceau")
+document18 = Document.create!(name: "Facture CDiscount Janvier 2020", user: user1, generated_date: Date.new(2020,10,10), url: "www.test.com", origin: "Marceau")
+document19 = Document.create!(name: "Facture CDiscount Février 2020", user: user1, generated_date: Date.new(2020,10,10), url: "www.test.com", origin: "Marceau")
+document20 = Document.create!(name: "Facture EDF", user: user1, generated_date: Date.new(2020,10,10), url: "www.test.com", origin: "Marceau")
 puts "Some documents have been created"
 
 puts "Creating new document tags..."
@@ -179,7 +179,53 @@ page12.photo.attach(io: file12, filename: 'impots-02032020.jpg', content_type: '
 
 
 file16 = URI.open('https://imgv2-2-f.scribdassets.com/img/document/405873611/original/3da57a192d/1599055963?v=1')
-page16 = Page.create!(page_number: 1, document: document18, content: {"content": "\n<section class=\"jumbotron jumbotron-header-bar jumbotron-header-bar--checkout\">\n<div class=\"container\">\n<div class=\"jumbotron-header-bar__inner\">\n<div>\n<ol class=\"breadcrumb\">\n<li>\n<a href=\"/\" title=\"Home\">\n<i class=\"udi udi-home\"></i>\n</a>\n</li>\n<li>\n<a href=\"/dashboard/purchase-history/\">\nPurchase history\n</a>\n</li>\n<li>\n<span>Receipt</span>\n</li>\n</ol>\n<h1>\nReceipt\n</h1>\n</div>\n</div>\n</div>\n</section>\n<div class=\"receipt-wrap\">\n<div class=\"receipt-wrap__content\">\n<div class=\"container bg-white fx\">\n<div class=\"col-xs-12\">\n<h3 class=\"bold\">\nReceipt\n- April 21, 2020\n</h3>\n<hr>\n<div class=\"col-xs-6 p0\">\n<h2>Udemy, Inc.</h2>\n</div>\n<div class=\"col-xs-6 p0\"> </div>\n</div>\n<div class=\"col-xs-12\">\n<div class=\"col-md-6 p0\">\n<p>\n600 Harrison Street, 3rd Floor\n<br>\nSan Francisco, CA 94107, US\n<br>\n<a href=\"/\">udemy.com</a>\n</p>\n</div>\n<div class=\"col-md-6 p0\">\n<div class=\"fx-rb db-md\">\n<p>\n<br>\n<strong>Date:</strong>\nApril 21, 2020\n<br>\n<strong>Order #:</strong>\nPD-CC-66324B6E594869686C717543\n</p>\n</div>\n</div>\n</div>\n<div class=\"col-xs-12 hidden-xxs hidden-xs\">\n<hr>\n</div>\n<div class=\"col-xs-12\">\n<div class=\"col-sm-6 col-xs-12 p0\">\n<div style=\"display: inline-block; vertical-align: top;\">\n<p><strong>Sold To:</strong></p>\n</div>\n<div style=\"display: inline-block; vertical-align: top;\">\nMarceau TASSIN\n<br>\n</div>\n</div>\n</div>\n<div class=\"col-xs-12\">\n<hr>\n</div>\n<div class=\"col-xs-12\">\n<table class=\"table table-condensed table-receipt\">\n<thead class=\"hidden-xxs hidden-xs\">\n <tr>\n<th>Item</th>\n<th>Ordered</th>\n<th>Coupon Codes</th>\n<th>Quantity</th>\n<th>Price</th>\n<th>Amount</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td data-purpose=\"course-title\">\n<strong class=\"visible-xxs visible-xs\">Item</strong>MERN Stack Front To Back: Full Stack React, Redux &amp; Node.js</td>\n<td>\n<strong class=\"visible-xxs visible-xs\">Ordered</strong>April 21, 2020</td>\n<td></td>\n<td>\n<strong class=\"visible-xxs visible-xs\">Quantity</strong>1</td>\n<td>\n<strong class=\"visible-xxs visible-xs\">Price</strong>€16.99</td>\n<td>\n<strong class=\"visible-xxs visible-xs\">Amount</strong>€16.99</td>\n</tr>\n<tr>\n<td colspan=\"3\"></td>\n<td>\nSubtotal\n</td>\n<td>€14.16</td>\n</tr>\n<tr>\n<td colspan=\"3\"></td>\n<td>\nTax*\n</td>\n<td>€2.83</td>\n</tr>\n<tr>\n<td colspan=\"3\"></td>\n<td>\nTotal Paid\n</td>\n<td data-purpose=\"total-price\">€16.99</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"col-xs-12\">\n<hr>\n<p>\n*For any users charged VAT, the Tax amount is calculated on the Subtotal, not the Total Amount.\nVAT #: EU372008054\n</p>\n<hr>\n</div>\n<div class=\"col-xs-12\">\n<p>\nIf you have any questions about this receipt please contact our <a href=\"https://support.udemy.com/hc\">support team.</a></p>\n</div>\n</div>\n</div>\n</div>\n", "css_url": ["https://www.udemy.com/staticx/udemy/js/webpack/entry-main-legacy.78d8d0d290f5d5ea1447.css", "https://www.udemy.com/staticx/udemy/js/webpack/udlite-common-css.9f010052691f7824748c.css", "https://www.udemy.com/staticx/udemy/js/webpack/payment.7ebd4874740c6ec37fb5.css"]})
+page16 = Page.create!(page_number: 1, document: document18, content: {"content":
+"\n<section class=\"jumbotron jumbotron-header-bar
+jumbotron-header-bar--checkout\">\n<div class=\"container\">\n<div
+class=\"jumbotron-header-bar__inner\">\n<div>\n<ol
+class=\"breadcrumb\">\n<li>\n<a href=\"/\" title=\"Home\">\n<i class=\"udi
+udi-home\"></i>\n</a>\n</li>\n<li>\n<a
+href=\"/dashboard/purchase-history/\">\nPurchase
+history\n</a>\n</li>\n<li>\n<span>Receipt</span>\n</li>\n</ol>\n<h1>\nReceipt\n</h1>\n</div>\n</div>\n</div>\n</section>\n<div
+class=\"receipt-wrap\">\n<div class=\"receipt-wrap__content\">\n<div
+class=\"container bg-white fx\">\n<div class=\"col-xs-12\">\n<h3
+class=\"bold\">\nReceipt\n- April 21, 2020\n</h3>\n<hr>\n<div class=\"col-xs-6
+p0\">\n<h2>Udemy, Inc.</h2>\n</div>\n<div class=\"col-xs-6 p0\">
+</div>\n</div>\n<div class=\"col-xs-12\">\n<div class=\"col-md-6 p0\">\n<p>\n600
+Harrison Street, 3rd Floor\n<br>\nSan Francisco, CA 94107, US\n<br>\n<a
+href=\"/\">udemy.com</a>\n</p>\n</div>\n<div class=\"col-md-6 p0\">\n<div
+class=\"fx-rb db-md\">\n<p>\n<br>\n<strong>Date:</strong>\nApril 21,
+2020\n<br>\n<strong>Order
+#:</strong>\nPD-CC-66324B6E594869686C717543\n</p>\n</div>\n</div>\n</div>\n<div
+class=\"col-xs-12 hidden-xxs hidden-xs\">\n<hr>\n</div>\n<div
+class=\"col-xs-12\">\n<div class=\"col-sm-6 col-xs-12 p0\">\n<div
+style=\"display: inline-block; vertical-align: top;\">\n<p><strong>Sold
+To:</strong></p>\n</div>\n<div style=\"display: inline-block; vertical-align:
+top;\">\nMarceau TASSIN\n<br>\n</div>\n</div>\n</div>\n<div
+class=\"col-xs-12\">\n<hr>\n</div>\n<div class=\"col-xs-12\">\n<table
+class=\"table table-condensed table-receipt\">\n<thead class=\"hidden-xxs
+hidden-xs\">\n <tr>\n<th>Item</th>\n<th>Ordered</th>\n<th>Coupon
+Codes</th>\n<th>Quantity</th>\n<th>Price</th>\n<th>Amount</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td
+data-purpose=\"course-title\">\n<strong class=\"visible-xxs
+visible-xs\">Item</strong>MERN Stack Front To Back: Full Stack React, Redux
+&amp; Node.js</td>\n<td>\n<strong class=\"visible-xxs
+visible-xs\">Ordered</strong>April 21, 2020</td>\n<td></td>\n<td>\n<strong
+class=\"visible-xxs visible-xs\">Quantity</strong>1</td>\n<td>\n<strong
+class=\"visible-xxs visible-xs\">Price</strong>€16.99</td>\n<td>\n<strong
+class=\"visible-xxs visible-xs\">Amount</strong>€16.99</td>\n</tr>\n<tr>\n<td
+colspan=\"3\"></td>\n<td>\nSubtotal\n</td>\n<td>€14.16</td>\n</tr>\n<tr>\n<td
+colspan=\"3\"></td>\n<td>\nTax*\n</td>\n<td>€2.83</td>\n</tr>\n<tr>\n<td
+colspan=\"3\"></td>\n<td>\nTotal Paid\n</td>\n<td
+data-purpose=\"total-price\">€16.99</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div
+class=\"col-xs-12\">\n<hr>\n<p>\n*For any users charged VAT, the Tax amount is
+calculated on the Subtotal, not the Total Amount.\nVAT #:
+EU372008054\n</p>\n<hr>\n</div>\n<div class=\"col-xs-12\">\n<p>\nIf you have any
+questions about this receipt please contact our <a
+href=\"https://support.udemy.com/hc\">support
+team.</a></p>\n</div>\n</div>\n</div>\n</div>\n", "css_url":
+["https://www.udemy.com/staticx/udemy/js/webpack/entry-main-legacy.78d8d0d290f5d5ea1447.css",
+"https://www.udemy.com/staticx/udemy/js/webpack/udlite-common-css.9f010052691f7824748c.css",
+"https://www.udemy.com/staticx/udemy/js/webpack/payment.7ebd4874740c6ec37fb5.css"]})
 page16.photo.attach(io: file16, filename: 'facturecdiscount-01012020.jpg', content_type: 'image/jpg')
 
 file17 = URI.open('https://0.academia-photos.com/attachment_thumbnails/51565457/mini_magick20190125-18879-1mn5tgc.png?1548408225')

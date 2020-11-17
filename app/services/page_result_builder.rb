@@ -1,15 +1,13 @@
 class PageResultBuilder < ResultBuilderBase
   def autocomplete_hint
-    # {
-    #   document_id: record.document.id,
-    #   page_id: record.id,
-    #   name: record.document.name,
-    #   url: record.document.url,
-    #   origin: record.document.origin,
-    #   generated_date: record.document.generated_date,
-    #   content: record.content,
-    #   page: record.page_number
-    # }
-    record
+    document = record.document
+    {
+      document_id: document.id,
+      name: document.name,
+      url: document.url,
+      origin: document.origin,
+      generated_date: document.generated_date,
+      pages: Page.where(document: document)
+    }
   end
 end

@@ -8,19 +8,14 @@ class Document < ApplicationRecord
   has_many :pages, dependent: :destroy, inverse_of: :document
   accepts_nested_attributes_for :pages, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :document_tags, allow_destroy: true, reject_if: :all_blank
-  validates :name, :generated_date, :url,:origin, presence: true
+  validates :name, :generated_date, :url, :origin, presence: true
 
 
-  settings index: { number_of_shards: 1 } do
-    mappings dynamic: :false do
-      indexes :name, type: 'text', analyzer: 'ngram_analyzer',
-                     search_analyzer: 'whitespace_analyzer'
-      indexes :generated_date
-      indexes :url, type: 'text', analyzer: 'ngram_analyzer',
-                     search_analyzer: 'whitespace_analyzer'
-      indexes :origin, type: 'text', analyzer: 'ngram_analyzer',
-                     search_analyzer: 'whitespace_analyzer'
-      indexes :user_id, type: 'integer'
+  settings do
+    mapping do
+      indexes :name
+      indexes :url
+      indexes :origin
     end
   end
 end

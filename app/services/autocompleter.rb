@@ -1,16 +1,14 @@
 class Autocompleter
-  MODELS_TO_SEARCH = [Page, Document].freeze
+  MODELS_TO_SEARCH = [Document, Page].freeze
 
   attr_accessor :query
 
   def initialize(query)
     @query = query
   end
-
   def self.call(query)
     new(query).call
   end
-
   def call
     results.map do |result|
       {
@@ -20,17 +18,14 @@ class Autocompleter
       }
     end
   end
-
   private
-
   def results
-    Elasticsearch::Model.search(search_query, MODELS_TO_SEARCH).records
+    Elasticsearch::Model.search(search_query,
+                                MODELS_TO_SEARCH).records
   end
-
   def build_hint(record)
     HintBuilder.call(record)
   end
-
   def search_query
     {
       "size": 50,
@@ -46,17 +41,15 @@ class Autocompleter
       }
     }
   end
-
   def multi_match
     {
       "multi_match": {
         "query": @query,
-        "fields": %w[content name origin url generated_date],
+        "fields": %w[name url origin content],
         "fuzziness": 'auto'
       }
     }
   end
-
   def priorities
     [
       {

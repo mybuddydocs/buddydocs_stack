@@ -1,4 +1,5 @@
 class HintBuilder
+
   attr_accessor :record
 
   def initialize(record)
@@ -18,5 +19,4 @@ class HintBuilder
   def result_builder
     "#{@record.class}ResultBuilder".constantize.new(@record)
   end
-
 end

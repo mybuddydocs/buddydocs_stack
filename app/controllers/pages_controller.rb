@@ -1,30 +1,11 @@
 class PagesController < ApplicationController
   def index
-
     search_result = Autocompleter.call(params[:query].to_s)
-
-    if search_result.empty?
-      user_docs = Page.joins(:document).where(documents: { user: current_user})
-      @pages = user_docs
-    else
-      @pages = []
-      search_result.each do |result|
-        if result[:record_type] == "Page"
-          @pages << result[:hint]
-        else
-          result.each do |document|
-            Page.where(document: document).each do |page|
-              @pages << page
-            end
-          end
-        end
-        @pages
-      end
-    end
+    render json: search_result, status: :found
   end
 
   def show
-    @page = Page.find(params[:id])
+    @page = Page.find(params["query"])
   end
 
   def new

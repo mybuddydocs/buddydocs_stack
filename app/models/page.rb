@@ -7,10 +7,9 @@ class Page < ApplicationRecord
 
   validates :page_number, :document, :content, presence: true
 
-  settings index: { number_of_shards: 1 } do
+  settings do
     mappings dynamic: false do
-      indexes :content, type: 'text', analyzer: 'ngram_analyzer',
-                     search_analyzer: 'whitespace_analyzer'
+      indexes :content, type: :text
     end
   end
 

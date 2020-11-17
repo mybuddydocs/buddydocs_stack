@@ -1,35 +1,16 @@
 require "elasticsearch/model"
 module Searchable
-  extend ActiveSupport::Concern
 
-  ngram_filter = { type: 'ngram', max_ngram_diff: 50, min_gram: 19, max_gram: 20 }
-  ngram_analyzer = {
-    type: 'custom',
-    tokenizer: 'standard',
-    filter: %w[lowercase asciifolding ngram_filter]
-  }
-  whitespace_analyzer = {
-    type: 'custom',
-    tokenizer: 'whitespace',
-    filter: %w[lowercase asciifolding]
-  }
+  extend ActiveSupport::Concern
 
   included do
     include Elasticsearch::Model
+
+    #The after_commit parts says that with every creation, updates or deletions to the model, it will index or delete the associated document in Elasticsearch.
     after_commit :index_document, if: :persisted?
     after_commit on: [:destroy] do
       __elasticsearch__.delete_document
     end
-
-    settings analysis: {
-      filter: {
-        ngram_filter: ngram_filter
-      },
-      analyzer: {
-        ngram_analyzer: ngram_analyzer,
-        whitespace_analyzer: whitespace_analyzer
-      }
-    }
   end
 
   private
