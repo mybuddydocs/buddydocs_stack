@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    search_result = Autocompleter.call(params[:query].to_s)
+    search_result = Autocompleter.call(params[:query].to_s, current_user)
     render json: search_result, status: :found
   end
 

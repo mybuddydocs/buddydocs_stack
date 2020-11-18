@@ -3,6 +3,7 @@ class PageResultBuilder < ResultBuilderBase
     document = record.document
     {
       document_id: document.id,
+      user: document.user.id,
       name: document.name,
       url: document.url,
       origin: document.origin,

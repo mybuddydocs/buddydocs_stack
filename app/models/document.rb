@@ -1,4 +1,5 @@
 class Document < ApplicationRecord
+  searchkick
   include Searchable
 
   belongs_to :user
@@ -13,9 +14,12 @@ class Document < ApplicationRecord
 
   settings do
     mapping do
-      indexes :name
-      indexes :url
-      indexes :origin
+      indexes :name, type: :text, analyzer: 'ngram_analyzer',
+                         search_analyzer: 'whitespace_analyzer'
+      indexes :url, type: :text, analyzer: 'ngram_analyzer',
+                         search_analyzer: 'whitespace_analyzer'
+      indexes :origin, type: :text, analyzer: 'ngram_analyzer',
+                         search_analyzer: 'whitespace_analyzer'
     end
   end
 end

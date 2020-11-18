@@ -1,4 +1,5 @@
 class Page < ApplicationRecord
+  searchkick
   include Searchable
 
   belongs_to :document
@@ -9,7 +10,8 @@ class Page < ApplicationRecord
 
   settings do
     mappings dynamic: false do
-      indexes :content, type: :text
+      indexes :content, type: :text, analyzer: 'ngram_analyzer',
+                         search_analyzer: 'whitespace_analyzer'
     end
   end
 

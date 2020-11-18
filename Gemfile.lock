@@ -471,6 +471,10 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    searchkick (4.4.1)
+      activemodel (>= 5)
+      elasticsearch (>= 6)
+      hashie
     selectize-rails (0.12.6)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
@@ -597,6 +601,7 @@ DEPENDENCIES
   rspec-rails!
   rspec-support!
   sass-rails (>= 6)
+  searchkick
   selenium-webdriver
   shoulda-matchers
   sidekiq (~> 6.0, >= 6.0.3)
