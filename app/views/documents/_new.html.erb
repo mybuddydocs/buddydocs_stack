@@ -48,6 +48,11 @@
           {class: "hidden-field hidden w-full bg-white text-gray-400 rounded-full  border-solid border-2 border-gray-400 px-4 py-2 focus:outline-none"}%>
       <% end %>
     </div>
+    <div class=' hidden my-4 w-full px-2' id="hidden_field_download">
+      <%= f.fields_for :page do |d| %>
+        <%= d.file_field :photo %>
+      <%end %>
+    </div>
     <!-- Bottom Navigation -->
     <div x-show="step != 'complete'"
         class='text-sm font-semibold bg-indigo-500 text-white rounded-full m-auto p-3 px-12 text-white hover:bg-indigo-500 hover:text-white'
@@ -61,6 +66,7 @@
 
   const hideButton = document.querySelector('.hide-button')
   const buttons = document.querySelectorAll('.display-button');
+  const download = document.querySelector('#hidden_field_download')
   const fields = document.querySelectorAll('.hidden-field');
   const radioButtons = document.querySelectorAll('input[type="radio"]')
   const photoButton = radioButtons[0]
@@ -74,6 +80,11 @@
         field.classList.remove('hidden');
         }
       )
+    if (event.originalTarget.value === "download") {
+      download.classList.remove('hidden');
+      nextButton.querySelector('p').remove();
+      nextButton.insertAdjacentHTML('beforeend', '<button  type="submit" name="commit"  id="next" x-show="step < 2" @click="step++" > Suivant </button>');
+    }
     });
   });
 
@@ -81,6 +92,7 @@
     fields.forEach(field => {
       field.classList.add('hidden');
     });
+    download.classList.add('hidden');
     nextButton.querySelector('p').remove();
     nextButton.insertAdjacentHTML('beforeend', '<button id="next" x-show="step < 2" @click="step++" > <%= link_to "Connecter" ,connectors_path %> </button>');
   });
