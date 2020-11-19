@@ -6,5 +6,5 @@ class Document < ApplicationRecord
   has_many :pages, dependent: :destroy, inverse_of: :document
   accepts_nested_attributes_for :pages, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :document_tags, allow_destroy: true, reject_if: :all_blank
-  validates :name, :date, :url,:origin, presence: true
+  validates :name, :date, :url,:origin, :pages, :document_tags,  presence: true
 end
