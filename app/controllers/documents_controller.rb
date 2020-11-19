@@ -27,6 +27,7 @@ class DocumentsController < ApplicationController
     @document.url = "pc"
     @document.origin="pc"
     @document.generated_date = Date.today
+
     if @document.save
       render 'categories/index'
     else
@@ -46,6 +47,5 @@ class DocumentsController < ApplicationController
   private
   def document_params
     params.require(:document).permit(:name, pages_attributes: [:id, :photo], document_tags_attributes: [:id, :tag_id])
-
   end
 end
