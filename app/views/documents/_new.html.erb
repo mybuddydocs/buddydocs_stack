@@ -1,45 +1,63 @@
-  <%= form_with model: @document , class: "flex flex-col justify-center items-center pb-3" do |f| %>
-  <div class='my-4 flex justify-around'>
-    <div class='w-1/3 px-2 flex flex-col items-center'>
-      <%= link_to documents_path ,class:'' do %>
-      <svg class=" bg-gray-200 hover:bg-gray-400 px-4 py-2 rounded-full" width="83" height="45" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M22 5.25V18.75C22 19.9922 21.0762 21 19.9375 21H2.0625C0.923828 21 0 19.9922 0 18.75V5.25C0 4.00781 0.923828 3 2.0625 3H5.84375L6.37227 1.45781C6.67305 0.58125 7.44219 0 8.30156 0H13.6941C14.5535 0 15.3227 0.58125 15.6234 1.45781L16.1562 3H19.9375C21.0762 3 22 4.00781 22 5.25ZM16.1562 12C16.1562 8.89688 13.8445 6.375 11 6.375C8.15547 6.375 5.84375 8.89688 5.84375 12C5.84375 15.1031 8.15547 17.625 11 17.625C13.8445 17.625 16.1562 15.1031 16.1562 12ZM14.7812 12C14.7812 14.2734 13.084 16.125 11 16.125C8.91602 16.125 7.21875 14.2734 7.21875 12C7.21875 9.72656 8.91602 7.875 11 7.875C13.084 7.875 14.7812 9.72656 14.7812 12Z" fill="white" />
-      </svg>
-      <% end %>
-      <p class='pt-2 text-xs text-center'>Prendre une photo</p>
-    </div>
-    <div class='w-1/3 px-2 flex flex-col items-center'>
-      <%= f.fields_for :page do |d| %>
-      <label class="">
-        <svg class=" bg-gray-200 hover:bg-gray-400 px-4 py-2 rounded-full" width="83" height="45" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12.7188 17.9965H9.28125C8.70977 17.9965 8.25 17.4949 8.25 16.8715V8.99648H4.48164C3.7168 8.99648 3.33437 7.98867 3.87578 7.39805L10.4113 0.263672C10.7336 -0.0878906 11.2621 -0.0878906 11.5844 0.263672L18.1242 7.39805C18.6656 7.98867 18.2832 8.99648 17.5184 8.99648H13.75V16.8715C13.75 17.4949 13.2902 17.9965 12.7188 17.9965ZM22 17.6215V22.8715C22 23.4949 21.5402 23.9965 20.9688 23.9965H1.03125C0.459766 23.9965 0 23.4949 0 22.8715V17.6215C0 16.998 0.459766 16.4965 1.03125 16.4965H6.875V16.8715C6.875 18.3199 7.95352 19.4965 9.28125 19.4965H12.7188C14.0465 19.4965 15.125 18.3199 15.125 16.8715V16.4965H20.9688C21.5402 16.4965 22 16.998 22 17.6215ZM16.6719 21.7465C16.6719 21.2309 16.2852 20.809 15.8125 20.809C15.3398 20.809 14.9531 21.2309 14.9531 21.7465C14.9531 22.2621 15.3398 22.684 15.8125 22.684C16.2852 22.684 16.6719 22.2621 16.6719 21.7465ZM19.4219 21.7465C19.4219 21.2309 19.0352 20.809 18.5625 20.809C18.0898 20.809 17.7031 21.2309 17.7031 21.7465C17.7031 22.2621 18.0898 22.684 18.5625 22.684C19.0352 22.684 19.4219 22.2621 19.4219 21.7465Z" fill="white" />
-        </svg>
-        <span style="display:none;">
-          <%= d.file_field :photo %>
-        </span>
-      </label>
-      <% end %>
-      <p class='pt-2 text-xs text-center'>Transférer depuis votre appareil</p>
-    </div>
-    <div class='w-1/3 px-2 flex flex-col items-center'>
- <!-- <%= render 'credentials/new'%> --> 
-      <svg class=" bg-gray-200 hover:bg-gray-400 px-4 py-2 rounded-full" width="83" height="45" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.2857 15C16.1755 15 15.1551 15.3665 14.3496 15.9795L9.3168 12.9769C9.46584 12.3334 9.46584 11.6666 9.3168 11.023L14.3496 8.0205C15.1551 8.63348 16.1755 9 17.2857 9C19.8893 9 22 6.98527 22 4.5C22 2.01473 19.8893 0 17.2857 0C14.6821 0 12.5714 2.01473 12.5714 4.5C12.5714 4.83553 12.6102 5.16234 12.6832 5.47692L7.6504 8.47945C6.8449 7.86652 5.8245 7.5 4.71429 7.5C2.11067 7.5 0 9.51473 0 12C0 14.4853 2.11067 16.5 4.71429 16.5C5.8245 16.5 6.8449 16.1335 7.6504 15.5205L12.6832 18.5231C12.6088 18.8439 12.5713 19.1714 12.5714 19.5C12.5714 21.9853 14.6821 24 17.2857 24C19.8893 24 22 21.9853 22 19.5C22 17.0147 19.8893 15 17.2857 15Z" fill="white" />
-      </svg>
-      <p class='pt-2 text-xs text-center'>Se connecter sur vos comptes clients</p>
-    </div>
-  </div>
-
-  <div class='my-4 w-full px-2'>
-    <%= f.text_field :name , placeholder: 'Nom du document',
-      class: 'w-full px-4 py-2 bg-white text-gray-500 rounded-full border-solid border-2 border-gray-400 focus:outline-none'%>
-  </div>
-
-  <div class='my-4 w-full px-2'>
-    <%= f.fields_for :document_tag do |g| %>
-    <%= g.collection_select :tag, @tags, :id, :name, {prompt: "Type de document"},
-      {class: "w-full bg-white text-gray-400 rounded-full  border-solid border-2 border-gray-400 px-4 py-2 focus:outline-none"}%>
-    <% end %>
-  </div>
-  <%= f.submit "Suivant", class: 'text-sm font-semibold bg-indigo-500 text-white rounded-full m-auto p-3 px-12 text-white hover:bg-indigo-500 hover:text-white' %>
+<%= form_with model: @document , class: "flex flex-col justify-center items-center pb-3" do |f| %>
+<% if @document.errors.any? %>
+<ul>
+  <% @document.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
   <% end %>
+</ul>
+<% end %>
+<div class='my-4 flex justify-around'>
+  <div class='flex flex-col justify-center mx-2'>
+    <%= link_to documents_path ,class:'' do %>
+    <svg class=" bg-gray-200 hover:bg-gray-400 px-4 py-2 rounded-full" width="83" height="45" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22 5.25V18.75C22 19.9922 21.0762 21 19.9375 21H2.0625C0.923828 21 0 19.9922 0 18.75V5.25C0 4.00781 0.923828 3 2.0625 3H5.84375L6.37227 1.45781C6.67305 0.58125 7.44219 0 8.30156 0H13.6941C14.5535 0 15.3227 0.58125 15.6234 1.45781L16.1562 3H19.9375C21.0762 3 22 4.00781 22 5.25ZM16.1562 12C16.1562 8.89688 13.8445 6.375 11 6.375C8.15547 6.375 5.84375 8.89688 5.84375 12C5.84375 15.1031 8.15547 17.625 11 17.625C13.8445 17.625 16.1562 15.1031 16.1562 12ZM14.7812 12C14.7812 14.2734 13.084 16.125 11 16.125C8.91602 16.125 7.21875 14.2734 7.21875 12C7.21875 9.72656 8.91602 7.875 11 7.875C13.084 7.875 14.7812 9.72656 14.7812 12Z" fill="white" />
+    </svg>
+    <% end %>
+    <p class='text-xs text-center'>Prendre <br>une photo</p>
+  </div>
+  <div class='flex flex-col justify-center mx-2'>
+    <%= f.fields_for :pages do |d| %>
+    <label class="">
+      <svg class=" bg-gray-200 hover:bg-gray-400 px-4 py-2 rounded-full" width="83" height="45" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.7188 17.9965H9.28125C8.70977 17.9965 8.25 17.4949 8.25 16.8715V8.99648H4.48164C3.7168 8.99648 3.33437 7.98867 3.87578 7.39805L10.4113 0.263672C10.7336 -0.0878906 11.2621 -0.0878906 11.5844 0.263672L18.1242 7.39805C18.6656 7.98867 18.2832 8.99648 17.5184 8.99648H13.75V16.8715C13.75 17.4949 13.2902 17.9965 12.7188 17.9965ZM22 17.6215V22.8715C22 23.4949 21.5402 23.9965 20.9688 23.9965H1.03125C0.459766 23.9965 0 23.4949 0 22.8715V17.6215C0 16.998 0.459766 16.4965 1.03125 16.4965H6.875V16.8715C6.875 18.3199 7.95352 19.4965 9.28125 19.4965H12.7188C14.0465 19.4965 15.125 18.3199 15.125 16.8715V16.4965H20.9688C21.5402 16.4965 22 16.998 22 17.6215ZM16.6719 21.7465C16.6719 21.2309 16.2852 20.809 15.8125 20.809C15.3398 20.809 14.9531 21.2309 14.9531 21.7465C14.9531 22.2621 15.3398 22.684 15.8125 22.684C16.2852 22.684 16.6719 22.2621 16.6719 21.7465ZM19.4219 21.7465C19.4219 21.2309 19.0352 20.809 18.5625 20.809C18.0898 20.809 17.7031 21.2309 17.7031 21.7465C17.7031 22.2621 18.0898 22.684 18.5625 22.684C19.0352 22.684 19.4219 22.2621 19.4219 21.7465Z" fill="white" />
+      </svg>
+      <span style="display:none;">
+        <%= d.file_field :photo %>
+      </span>
+    </label>
+    <% end %>
+    <p class='text-xs text-center'>Importer <br>un document</p>
+  </div>
+  <div class='flex flex-col justify-center mx-2'>
+    <%= link_to new_credential_path ,class:'' do %>
+    <svg class=" bg-gray-200 hover:bg-gray-400 px-4 py-2 rounded-full" width="83" height="45" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.2857 15C16.1755 15 15.1551 15.3665 14.3496 15.9795L9.3168 12.9769C9.46584 12.3334 9.46584 11.6666 9.3168 11.023L14.3496 8.0205C15.1551 8.63348 16.1755 9 17.2857 9C19.8893 9 22 6.98527 22 4.5C22 2.01473 19.8893 0 17.2857 0C14.6821 0 12.5714 2.01473 12.5714 4.5C12.5714 4.83553 12.6102 5.16234 12.6832 5.47692L7.6504 8.47945C6.8449 7.86652 5.8245 7.5 4.71429 7.5C2.11067 7.5 0 9.51473 0 12C0 14.4853 2.11067 16.5 4.71429 16.5C5.8245 16.5 6.8449 16.1335 7.6504 15.5205L12.6832 18.5231C12.6088 18.8439 12.5713 19.1714 12.5714 19.5C12.5714 21.9853 14.6821 24 17.2857 24C19.8893 24 22 21.9853 22 19.5C22 17.0147 19.8893 15 17.2857 15Z" fill="white" />
+    </svg>
+    <% end %>
+    <p class='text-xs text-center'>Collecter <br>des documents</p>
+  </div>
+</div>
+<div>
+  <p id='inputValue' class='text-gray-400'></p>
+</div>
+
+<div class='my-4 w-full'>
+  <%= f.text_field :name , placeholder: 'Nom du document',
+      class: 'w-full px-4 py-2 bg-white text-gray-400 rounded-full border-solid border-2 border-gray-400 focus:outline-none'%>
+</div>
+
+<div class='my-4 w-full'>
+  <%= f.fields_for :document_tags do |g| %>
+  <%= g.collection_select  :tag_id, Tag.all, :id, :name, {prompt: "Type de document"},
+      {class: "w-full bg-white text-gray-400 rounded-full  border-solid border-2 border-gray-400 px-4 py-2 focus:outline-none"}%>
+  <% end %>
+</div>
+<%= f.submit "Ajouter un document", class: 'btn btn-primary hover:bg-indigo-400 justify-self-center focus:outline-none' %>
+<% end %>
+<script>
+  const input = document.querySelector('#document_pages_attributes_0_photo');
+  input.addEventListener('input', (e) => {
+    const inputValue = document.querySelector('#inputValue');
+    inputValue.innerHTML = input.value.substr(12);
+  })
+</script>
