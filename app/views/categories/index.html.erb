@@ -105,7 +105,8 @@
             <%= image_tag  "document_add/img_doc_add2.svg" %>
             <!--Title-->
             <div class="flex justify-center items-center pb-3">
-              <p class="text-2xl font-bold">test modal</p>
+              <p class="text-2xl font-bold">Quel compte souhaitez-vous connecter ?</p>
+              <p class="text-base ">Généralement, nos utilisateurs commencent par connecter leurs comptes EDF, puis leurs impôts et finissent par ajouter au fur et à mesure leur compte client de téléphonie et internet. Cela vous permettra en une seule identification d´agréger tous vos papiers correspondants.</p>
             </div>
           </div>
         </div>
@@ -119,7 +120,7 @@
         </div>
         <div x-show.transition.in="step === 2">
           <div class="flex flex-col justify-center items-center pb-3">
-            <p>Gros test</p>
+            <%= render 'connectors/index' %>
           </div>
         </div>
         <!-- /Step Content -->

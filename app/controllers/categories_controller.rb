@@ -11,5 +11,8 @@ class CategoriesController < ApplicationController
     @document_tag = DocumentTag.new
     @tags = Tag.all
 
+    # ajout liste connecteurs
+    @connectors = Connector.all
+
   end
 end
