@@ -6,5 +6,6 @@ class CredentialsController < ApplicationController
 
   def new
     @credential = Credential.new
+    @connectors = Connector.all
   end
 end
