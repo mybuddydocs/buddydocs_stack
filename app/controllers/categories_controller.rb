@@ -4,12 +4,11 @@ class CategoriesController < ApplicationController
     documents_with_date = Document.select {|document| document.reminder_date != nil }
     @documents_with_reminder = documents_with_date.sort_by {|document| document.reminder_date}
 
-
     # ajout document
     @document = Document.new
-    @page = Page.new
-    @document_tag = DocumentTag.new
-    @tags = Tag.all
+    #  BUG: content et page_number pas pris en compte dans le build (mettre des inputs caché)
+    @document.pages.build(content: 'en cours de traitement', page_number: 1)
+    @document.document_tags.build
 
     # ajout des connecteurs
     @connectors = Connector.all
