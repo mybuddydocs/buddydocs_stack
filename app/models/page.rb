@@ -1,7 +1,7 @@
 class Page < ApplicationRecord
   belongs_to :document
   has_one_attached :photo
-
+  validates :photo, presence: true
   after_commit :ocr_la_page
 
   private
