@@ -39,7 +39,7 @@
 
     <div class='my-4 w-full px-2'>
       <%= f.fields_for :document_tag do |g| %>
-        <%= g.collection_select :tag, @tags, :id, :name, {prompt: "Type de document"},
+        <%= g.collection_select :tag, Tag.all, :id, :name, {prompt: "Type de document"},
           {class: "hidden-field hidden w-full bg-white text-gray-500 rounded-full  border-solid border-2 border-gray-400 px-4 py-2 focus:outline-none"}%>
       <% end %>
     </div>
