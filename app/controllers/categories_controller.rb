@@ -14,5 +14,7 @@ class CategoriesController < ApplicationController
     # ajout des connecteurs
     @connectors = Connector.all
 
+    # Ajout credential
+    @credential = Credential.new
   end
 end

@@ -58,7 +58,7 @@
 <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
   <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
 
-  <div class="modal-container bg-white rounded-lg w-1/2 mx-auto rounded shadow-lg z-50 overflow-y-auto ">
+  <div class="modal-container bg-white rounded-lg w-1/2 xl:w-1/3 mx-auto rounded shadow-lg z-50 overflow-y-auto ">
 
     <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
       <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
@@ -104,7 +104,7 @@
           <div class="modal-content   text-left">
             <%= image_tag  "document_add/img_doc_add2.svg"  ,class:'w-full'%>
             <!--Title-->
-            <div class="flex-col justify-center items-center pb-3 m-auto">
+            <div class="flex-col justify-center items-center pb-3 mx-3">
               <p class="text-2xl font-bold text-center">Quel compte souhaitez-vous connecter ?</p>
               <p class="text-xs text-center">Généralement, nos utilisateurs commencent par connecter leurs comptes EDF, puis leurs impôts et finissent par ajouter au fur et à mesure leur compte client de téléphonie et internet. Cela vous permettra en une seule identification d´agréger tous vos papiers correspondants.</p>
             </div>
@@ -126,20 +126,10 @@
         </div>
         <div x-show.transition.in="step === 2">
           <div class="flex w-full flex-col justify-center items-center pb-3">
-            <%= render 'credentials/new' %>
+            <%= render 'credentials/new', credential:@credential %>
           </div>
         </div>
         <!-- /Step Content -->
-
-        <!-- Bottom Navigation -->
-        <div x-show="step != 'complete'">
-          <button
-            @click="step = 'complete'"
-            x-show="step === 2"
-            class='text-sm font-semibold bg-indigo-500 text-white rounded-full m-auto p-3 px-12 text-white hover:bg-indigo-500 hover:text-white'
-          >Terminer</button>
-        </div>
-        <!-- /Bottom Navigation -->
 
       </div>
     </div>
