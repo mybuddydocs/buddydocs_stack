@@ -10,5 +10,10 @@ class CategoriesController < ApplicationController
     @document.pages.build(content: 'en cours de traitement', page_number: 1)
     @document.document_tags.build
 
+    # ajout des connecteurs
+    @connectors = Connector.all
+
+    # Ajout credential
+    @credential = Credential.new
   end
 end
